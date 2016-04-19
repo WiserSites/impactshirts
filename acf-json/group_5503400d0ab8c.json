@@ -1,0 +1,2355 @@
+{
+    "key": "group_5503400d0ab8c",
+    "title": "Modular Landing Page",
+    "fields": [
+        {
+            "key": "field_569eb362e9c8d",
+            "label": "Hide Title & Social Sharing Options?",
+            "name": "hide_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
+            "key": "field_5503404a7caae",
+            "label": "Modules",
+            "name": "modules",
+            "type": "repeater",
+            "instructions": "Add new modules and customize them to build the page of your dreams. Have fun!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add a New Module",
+            "sub_fields": [
+                {
+                    "key": "field_550340757caaf",
+                    "label": "Module Type",
+                    "name": "moduleType",
+                    "type": "select",
+                    "instructions": "Select the type of module that you would like to build for this position on the page.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Select a Module Type...": "Select a Module Type...",
+                        "textAndImage": "Banner",
+                        "twobanners": "Two Column Banners",
+                        "slider": "Slider",
+                        "textBlock": "Text Block",
+                        "designIdeas": "Three Column Banner",
+                        "splitContent": "Split Content and\/or Reviews",
+                        "splitForm": "Split Content and Form",
+                        "liveTextBoxes": "Live Text Boxes",
+                        "testimonialsBlock": "Testimonials Slider",
+                        "designCategory": "Designs From a Category",
+                        "blogPosts": "Blog Posts",
+                        "groupNames": "Group Names"
+                    },
+                    "default_value": [
+                        "Select a Module Type..."
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_55034ab27eed3",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This module consists of an image on the right with text, video, buttons, etc., on the left. To see a sample of this module <a target=\"_blank\" href=\"http:\/\/ministrygear.com\/wp-content\/uploads\/2015\/03\/2015-03-13_1539.png\">Click Here.<\/a>",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_5503417abb0bb",
+                    "label": "Header Image",
+                    "name": "headerImage",
+                    "type": "image",
+                    "instructions": "This is the full width header image. It should be 1200x350, and the left side needs to be entirely blank except for the background color. We will place live text or a video over the top of the left side.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "impactshirts-450",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_550341d7bb0bc",
+                    "label": "Video or Text",
+                    "name": "videoTextToggle",
+                    "type": "radio",
+                    "instructions": "Would you like to display live text or a video on the left side of the header image area?",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Please Select...": "Please Select...",
+                        "Live Text": "Live Text",
+                        "Video": "Video",
+                        "Image Only": "Image Only"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_55bfa14ab8819",
+                    "label": "Image Link (Optional)",
+                    "name": "image_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            },
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Image Only"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_55034218bb0bd",
+                    "label": "Header Image Title",
+                    "name": "headerImageTitle",
+                    "type": "text",
+                    "instructions": "This is the title of the paragraph on the left side of the header image.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Live Text"
+                            },
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_550c5bd0a1bae",
+                    "label": "Header Image Title Color",
+                    "name": "headerImageTitleColor",
+                    "type": "color_picker",
+                    "instructions": "If the default title color does not work with the background color, use this to change it to something else.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            },
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Live Text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5503424a03e6b",
+                    "label": "Header Image Paragraph",
+                    "name": "headerImageText",
+                    "type": "textarea",
+                    "instructions": "This is paragraph of text that will appear on the left side of the header image area.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Live Text"
+                            },
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 100,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5503428603e6c",
+                    "label": "Header Button",
+                    "name": "headerButton",
+                    "type": "radio",
+                    "instructions": "Do you want to show a \"Call to Action\" button below the paragraph of text?",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Live Text"
+                            },
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "No": "No",
+                        "Yes": "Yes"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_5503453396414",
+                    "label": "Header Button Color Scheme",
+                    "name": "buttonColorScheme",
+                    "type": "select",
+                    "instructions": "Select the color scheme for your button.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Live Text"
+                            },
+                            {
+                                "field": "field_5503428603e6c",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Default": "Default",
+                        "Light Color": "Light Color"
+                    },
+                    "default_value": {
+                        "": ""
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_550342b003e6d",
+                    "label": "Header Button Text",
+                    "name": "headerButtonText",
+                    "type": "text",
+                    "instructions": "What do you want written on the button?",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5503428603e6c",
+                                "operator": "==",
+                                "value": "Yes"
+                            },
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Live Text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "See Design Ideas",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_550342dc03e6e",
+                    "label": "Header Button URL",
+                    "name": "headerButtonLink",
+                    "type": "text",
+                    "instructions": "Where do you want the button to link to?",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5503428603e6c",
+                                "operator": "==",
+                                "value": "Yes"
+                            },
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Live Text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "http:\/\/",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5503430103e6f",
+                    "label": "Header Video",
+                    "name": "headerVideo",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textAndImage"
+                            },
+                            {
+                                "field": "field_550341d7bb0bc",
+                                "operator": "==",
+                                "value": "Video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": 560,
+                    "height": 315
+                },
+                {
+                    "key": "field_55034c02791f9",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textBlock"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This is nothing more than a basic text editor that allows you to place a block of text information on the page.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_55034c30791fa",
+                    "label": "Text Block",
+                    "name": "textBlock",
+                    "type": "wysiwyg",
+                    "instructions": "Write something great and put it in here.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "textBlock"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1
+                },
+                {
+                    "key": "field_55034d30e67d8",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designIdeas"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Click on the \"Add Row\" button to add additional design idea boxes. This is displayed on a 3-wide grid so for optimal display, you will want to add boxes to a total quantity that is a multiple of three.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_55034d4ae67d9",
+                    "label": "Design Ideas",
+                    "name": "designIdeas",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designIdeas"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "block",
+                    "button_label": "Add Design Idea Box",
+                    "sub_fields": [
+                        {
+                            "key": "field_55034d6fe67da",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_55034e23e67de",
+                            "label": "Paragraph Text",
+                            "name": "bottomText",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55034dc9e67db",
+                            "label": "URL",
+                            "name": "url",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 25,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "http:\/\/google.com",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55034defe67dc",
+                            "label": "On-Image Title",
+                            "name": "topText",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 25,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55034e04e67dd",
+                            "label": "Paragraph Title",
+                            "name": "paragraphTitle",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 25,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55034e58e67df",
+                            "label": "Button Text",
+                            "name": "button",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 25,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "collapsed": ""
+                },
+                {
+                    "key": "field_5509963bccf59",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "slider"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This is the module to use for adding sliders onto the page. Simply supply the ID number of the slider that you would like to display.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_550996e9ccf5a",
+                    "label": "Slider ID",
+                    "name": "sliderID",
+                    "type": "text",
+                    "instructions": "Supply the number only. Do not add a pound sign or any shortcodes.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "slider"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_550c6d93042b0",
+                    "label": "Information About this Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitContent"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This is the module that normally contains content on the left and the customer reviews block on the right.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_550c6dd4042b1",
+                    "label": "Customer Reviews",
+                    "name": "customerReviews",
+                    "type": "true_false",
+                    "instructions": "Do you wish to show customer reviews on the right side of this module?",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitContent"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_550c6e0b042b2",
+                    "label": "View Shirt Styles - Left",
+                    "name": "shirtStylesLeft",
+                    "type": "repeater",
+                    "instructions": "On the home page, you currently have two images being displayed in this section. However, if you would like to disable customer reviews, it may make sense to place one image in this section and place the other image in section on the right. The block for images on the right will appear if the \"Customer Reviews\" section becomes unchecked.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitContent"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550c6e1d042b3",
+                            "label": "image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_550c6e37042b4",
+                            "label": "URL",
+                            "name": "url",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "collapsed": ""
+                },
+                {
+                    "key": "field_550c6e60042b5",
+                    "label": "View Shirt Styles - Right",
+                    "name": "shirtStylesRight",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitContent"
+                            },
+                            {
+                                "field": "field_550c6dd4042b1",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550c6e60042b6",
+                            "label": "image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_550c6e60042b7",
+                            "label": "URL",
+                            "name": "url",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "collapsed": ""
+                },
+                {
+                    "key": "field_550c8ccf9bbb4",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitForm"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This is the module that contains design ideas and links on the left side and the form on the right side.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_550c9f9a7dae4",
+                    "label": "Left Title",
+                    "name": "leftTitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitForm"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_550c9fb47dae5",
+                    "label": "Right Title",
+                    "name": "rightTitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitForm"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_550c8cfc9bbb5",
+                    "label": "Designs",
+                    "name": "designs",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "splitForm"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "block",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550c8e509bbb6",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_550c8e6b9bbb7",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_550ca289c0c79",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_550c8e7b9bbb8",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "collapsed": ""
+                },
+                {
+                    "key": "field_550d9aebe9a2b",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "liveTextBoxes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This is the module that will output the text boxes with icons and stars.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_550d9b73e9a30",
+                    "label": "Stars",
+                    "name": "stars",
+                    "type": "radio",
+                    "instructions": "Do you want to display the stars on the top right corner of these text blocks?",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "liveTextBoxes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical"
+                },
+                {
+                    "key": "field_550d9b1de9a2c",
+                    "label": "Live Text Blocks",
+                    "name": "liveTextBlocks",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "liveTextBoxes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "block",
+                    "button_label": "Add Text Block",
+                    "sub_fields": [
+                        {
+                            "key": "field_550d9b47e9a2e",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5522fb2559903",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_550d9b35e9a2d",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 33,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_550d9b54e9a2f",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 66,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "collapsed": ""
+                },
+                {
+                    "key": "field_550ef17677ec5",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "testimonialsBlock"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This module will create the testimonial slider.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_55131b3eb75b1",
+                    "label": "Background Color",
+                    "name": "testimonialColor",
+                    "type": "color_picker",
+                    "instructions": "Use this field if you would like to change the background color of the testimonial module.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "testimonialsBlock"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_550ef19977ec6",
+                    "label": "Testimonial Slider",
+                    "name": "testimonialSlider",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "testimonialsBlock"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "block",
+                    "button_label": "Add Testimonial",
+                    "sub_fields": [
+                        {
+                            "key": "field_550ef1ad77ec7",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_550ef1d777ec9",
+                            "label": "Author & Group Name",
+                            "name": "author",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_550ef1c677ec8",
+                            "label": "Testimony",
+                            "name": "testimony",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "collapsed": ""
+                },
+                {
+                    "key": "field_550f10f30b79a",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designCategory"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This module is used to display a grid of T-Shirt designs in the same format as they appear on the design category pages. Only populate one of the design category fields and NOT BOTH.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_550f12a80104b",
+                    "label": "Number of Designs to Show",
+                    "name": "designCount",
+                    "type": "number",
+                    "instructions": "Please enter the number of designs you would like to display in this module. This will display best if you select multiples of the number 4. Remember to skip this many if you use this module again.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designCategory"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 4,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_550f119f0b79d",
+                    "label": "Offset",
+                    "name": "offset",
+                    "type": "number",
+                    "instructions": "If this is the second or third module displaying this category on this page, please enter the number of designs being displayed in the preceding modules so that we can skip that many on this module.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designCategory"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5512e895a0e52",
+                    "label": "Show \"View All\" Button",
+                    "name": "viewAll",
+                    "type": "true_false",
+                    "instructions": "If this is activated, the module will display a \"View All\" button below the grid of T shirt designs.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designCategory"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_550f11180b79b",
+                    "label": "Design Category",
+                    "name": "designCategory",
+                    "type": "taxonomy",
+                    "instructions": "Please select a category in this field or the other field, but NOT both fields.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designCategory"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "design-category",
+                    "field_type": "multi_select",
+                    "allow_null": 1,
+                    "load_save_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0,
+                    "add_term": 1,
+                    "load_terms": 0,
+                    "save_terms": 0
+                },
+                {
+                    "key": "field_550f11870b79c",
+                    "label": "Secondary Design Category",
+                    "name": "secondaryDesignCategory",
+                    "type": "taxonomy",
+                    "instructions": "Please select a category in this field or the other field, but NOT both fields.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "designCategory"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "specific-design-categories",
+                    "field_type": "multi_select",
+                    "allow_null": 1,
+                    "load_save_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0,
+                    "add_term": 1,
+                    "load_terms": 0,
+                    "save_terms": 0
+                },
+                {
+                    "key": "field_550f23a5187a6",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "blogPosts"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "This module will display posts from the blog.",
+                    "esc_html": 0,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_550f23d6187a7",
+                    "label": "Blog Posts Type",
+                    "name": "blogPostsType",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "blogPosts"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "recent": "Most Recent Blog Posts",
+                        "category": "Blog Posts From a Category"
+                    },
+                    "default_value": {
+                        "": ""
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_550f2429187a8",
+                    "label": "How Many Blog Posts",
+                    "name": "blogPostsCount",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "blogPosts"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 3,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_550f244b187a9",
+                    "label": "Blog Posts Category",
+                    "name": "blogPostsCategory",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "blogPosts"
+                            },
+                            {
+                                "field": "field_550f23d6187a7",
+                                "operator": "==",
+                                "value": "category"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "load_save_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0,
+                    "add_term": 1,
+                    "load_terms": 0,
+                    "save_terms": 0
+                },
+                {
+                    "key": "field_5646308d909fe",
+                    "label": "Left: Banner Image",
+                    "name": "left_banner_image",
+                    "type": "image",
+                    "instructions": "This is the full width header image. It should be 600x175. We can also place live text or a button over the top of the left side.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "impactshirts-150",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_564630e9909ff",
+                    "label": "Right: Banner Image",
+                    "name": "right_banner_image",
+                    "type": "image",
+                    "instructions": "This is the full width header image. It should be 600x175. We can also place live text or a button over the top of the left side.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "impactshirts-150",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_564641af3a396",
+                    "label": "Left: Full Banner Link",
+                    "name": "left_full_banner_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_564641e83a397",
+                    "label": "Right: Full Banner Link",
+                    "name": "right_full_banner_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_564631a815eee",
+                    "label": "Left: Text or Button",
+                    "name": "left_text_or_button",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None",
+                        "text": "Text",
+                        "button": "Button"
+                    },
+                    "default_value": {
+                        "none": "none"
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_5646321715eef",
+                    "label": "Right: Text or Button",
+                    "name": "right_text_or_button",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None",
+                        "text": "Text",
+                        "button": "Button"
+                    },
+                    "default_value": {
+                        "none": "none"
+                    },
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_5646328e3382a",
+                    "label": "Left: Text",
+                    "name": "left_text_field",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            },
+                            {
+                                "field": "field_564631a815eee",
+                                "operator": "==",
+                                "value": "text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_564632c33382c",
+                    "label": "Right: Text",
+                    "name": "right_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            },
+                            {
+                                "field": "field_5646321715eef",
+                                "operator": "==",
+                                "value": "text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56463313319c5",
+                    "label": "Left: Button Text",
+                    "name": "left_button_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            },
+                            {
+                                "field": "field_564631a815eee",
+                                "operator": "==",
+                                "value": "button"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56463355319c7",
+                    "label": "Right: Button Text",
+                    "name": "right_button_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            },
+                            {
+                                "field": "field_5646321715eef",
+                                "operator": "==",
+                                "value": "button"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56463376319c8",
+                    "label": "Left: Button Link",
+                    "name": "left_button_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            },
+                            {
+                                "field": "field_564631a815eee",
+                                "operator": "==",
+                                "value": "button"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_564633a5319ca",
+                    "label": "Right: Button Link",
+                    "name": "right_button_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "twobanners"
+                            },
+                            {
+                                "field": "field_5646321715eef",
+                                "operator": "==",
+                                "value": "button"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_56f8f814adbc7",
+                    "label": "Information About This Module",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "groupNames"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Click on the \"Add Row\" button to add additional design idea boxes. This is displayed on a 3-wide grid so for optimal display, you will want to add boxes to a total quantity that is a multiple of three.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_56f8f85aadbc8",
+                    "label": "Number of Group Names to Show",
+                    "name": "group_namesCount",
+                    "type": "number",
+                    "instructions": "Please enter the number of designs you would like to display in this module. This will display best if you select multiples of the number 4. Remember to skip this many if you use this module again.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "groupNames"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 4,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56f8f8a0adbc9",
+                    "label": "Offset",
+                    "name": "group_namesOffset",
+                    "type": "number",
+                    "instructions": "If this is the second or third module displaying this category on this page, please enter the number of designs being displayed in the preceding modules so that we can skip that many on this module.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "groupNames"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56f8f8bfadbca",
+                    "label": "Show \"View All\" Button",
+                    "name": "group_names_viewAll",
+                    "type": "true_false",
+                    "instructions": "If this is activated, the module will display a \"View All\" button below the grid of T shirt Group Names.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "groupNames"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_56f8f8dfadbcb",
+                    "label": "Group Names Category",
+                    "name": "group_names_category",
+                    "type": "taxonomy",
+                    "instructions": "Please select a category in this field or the other field, but NOT both fields.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "groupNames"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "group_category",
+                    "field_type": "multi_select",
+                    "allow_null": 1,
+                    "add_term": 1,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_56f8f938adbcc",
+                    "label": "Secondary Group Names Category",
+                    "name": "secondary_group_names_category",
+                    "type": "taxonomy",
+                    "instructions": "Please select a category in this field or the other field, but NOT both fields.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_550340757caaf",
+                                "operator": "==",
+                                "value": "groupNames"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "specific-design-categories",
+                    "field_type": "multi_select",
+                    "allow_null": 1,
+                    "add_term": 1,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0
+                }
+            ],
+            "collapsed": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-modular-template.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1459157463
+}

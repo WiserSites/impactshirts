@@ -1,0 +1,23 @@
+/* Checkbox style */
+.iphone-style  {
+	display: block;
+	width: 87px;
+	height: 28px;
+	background: url('images/iphone.png') no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+   float: right;
+	margin-right: 52%;
+   margin-top:10px;
+}
+.firerift-style {		
+	display: block;
+	width: 68px;
+	height: 28px;
+	background: url('images/firerift.png') no-repeat;
+	cursor: pointer;
+}
+.on {background-position: 0% 100%;}
+.off {background-position: 100% 0%;}
+.hidden{display: none !important;}
+/* Checkbox style */

@@ -1,0 +1,46 @@
+{
+    "key": "group_54bec7937ccb5",
+    "title": "Contest Assets",
+    "fields": [
+        {
+            "key": "field_542ebfc71fbdb",
+            "label": "Related Designs and\/or garments",
+            "name": "relatedDesigns",
+            "prefix": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "garment",
+                "design"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "contest"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1426096484
+}

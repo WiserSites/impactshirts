@@ -1,0 +1,1 @@
+<?php include 'taxonomy-design-category.php';

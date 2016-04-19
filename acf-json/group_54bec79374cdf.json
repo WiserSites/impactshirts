@@ -1,0 +1,74 @@
+{
+    "key": "group_54bec79374cdf",
+    "title": "Analytics Tracking Code",
+    "fields": [
+        {
+            "key": "field_547f6cf993620",
+            "label": "Tracking Code",
+            "name": "trackingCode",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "Paste the entire tracking code for this page into this textarea.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "garment"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "design"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "faq"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "contest"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "reviews"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1426096402
+}

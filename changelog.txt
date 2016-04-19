@@ -1,0 +1,21 @@
+Changelog Legend:
+----
+
+[+] = Added
+[*] = Changed
+[^] = Moved
+[=] = No Changes
+[x] = Deleted
+[!] = Bugs
+
+(05/16/16) - Improvements - Version 1.0.0
+
+[+] - Theme is ready.
+
+----
+
+
+----
+
+(05/16/2016)
+Initial Release
