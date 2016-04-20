@@ -35,7 +35,7 @@ require( $template_directory . '/core/includes/customizer.php' );
 require $template_directory . '/functions/theme-update-checker/theme-update-checker.php';
 $example_update_checker = new ThemeUpdateChecker(
 	'impactshirts',
-	'https://raw.githubusercontent.com/GregWiser/Impactshirts/master/info.json'
+	'https://raw.githubusercontent.com/WiserSites/impactshirts/master/info.json'
 );
 /*$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
 $myUpdateChecker = new $className(
