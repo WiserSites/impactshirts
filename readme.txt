@@ -1,7 +1,7 @@
 -------------------------------------------------------
     Thank you for downloading Impactshirts Theme!
 -------------------------------------------------------
-This and any other Theme provided by CyberChimps should
+This and any other Theme provided by Wiser Sites should
 be free of bugs, however do note that we're only humans
 and if you spot a bug do us a favor and report here
 
