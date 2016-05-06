@@ -9,19 +9,20 @@ if ( !defined( 'ABSPATH' ) ) {
  * Theme options upgrade bar
  */
 function impactshirts_upgrade_bar() {
+	return; //GX can remove
 	?>
 
 	<div class="upgrade-callout">
-		<p><img src="<?php echo get_template_directory_uri(); ?>/core/includes/theme-options/images/chimp.png" alt="CyberChimps"/>
+		<p><img src="<?php echo get_template_directory_uri(); ?>/core/includes/theme-options/images/chimp.png" alt="WiserSites"/>
 			<?php printf( __( 'Welcome to %1$s! Upgrade to %2$s today.', 'impactshirts' ),
 						  'Impactshirts',
-						  ' <a href="http://cyberchimps.com/store/impactshirtspro/" target="_blank" title="Impactshirts Pro">Impactshirts Pro</a> '
+						  ' <a href="http://wisersites.com/store/impactshirtspro/" target="_blank" title="Impactshirts Pro">Impactshirts Pro</a> '
 			); ?>
 		</p>
 
 		<div class="social-container">
 			<div class="social">
-				<a href="https://twitter.com/cyberchimps" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @cyberchimps</a>
+				<a href="https://twitter.com/wisersites" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @wisersites</a>
 				<script>!function (d, s, id) {
 						var js, fjs = d.getElementsByTagName(s)[0];
 						if (!d.getElementById(id)) {
@@ -34,7 +35,7 @@ function impactshirts_upgrade_bar() {
 			</div>
 			<div class="social">
 				<iframe
-					src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcyberchimps.com%2F&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"
+					src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwisersites.com%2F&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"
 					scrolling="no" frameborder="0"
 					style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
 			</div>
@@ -54,24 +55,25 @@ add_action( 'impactshirts_theme_options', 'impactshirts_upgrade_bar', 1 );
  * Theme Options Support and Information
  */
 function impactshirts_theme_support() {
+	return; //GX can remove
 	?>
 
 	<div id="info-box-wrapper" class="grid col-940">
 		<div class="info-box notice">
 
-			<a class="button" href="<?php echo esc_url( 'http://cyberchimps.com/guides/r-free/' ); ?>" title="<?php esc_attr_e( 'Instructions', 'impactshirts' ); ?>" target="_blank">
+			<a class="button" href="<?php echo esc_url( 'http://wisersites.com/guides/r-free/' ); ?>" title="<?php esc_attr_e( 'Instructions', 'impactshirts' ); ?>" target="_blank">
 				<?php _e( 'Instructions', 'impactshirts' ); ?></a>
 
-			<a class="button button-primary" href="<?php echo esc_url( 'http://cyberchimps.com/forum/free/impactshirts/' ); ?>" title="<?php esc_attr_e( 'Help', 'impactshirts' ); ?>" target="_blank">
+			<a class="button button-primary" href="<?php echo esc_url( 'http://wisersites.com/forum/free/impactshirts/' ); ?>" title="<?php esc_attr_e( 'Help', 'impactshirts' ); ?>" target="_blank">
 				<?php _e( 'Help', 'impactshirts' ); ?></a>
 
 			<a class="button" href="<?php echo esc_url( 'https://webtranslateit.com/en/projects/3598-Impactshirts-Theme' ); ?>" title="<?php esc_attr_e( 'Translate', 'impactshirts' ); ?>" target="_blank">
 				<?php _e( 'Translate', 'impactshirts' ); ?></a>
 
-			<a class="button" href="<?php echo esc_url( 'http://cyberchimps.com/showcase/' ); ?>" title="<?php esc_attr_e( 'Showcase', 'impactshirts' ); ?>" target="_blank">
+			<a class="button" href="<?php echo esc_url( 'http://wisersites.com/showcase/' ); ?>" title="<?php esc_attr_e( 'Showcase', 'impactshirts' ); ?>" target="_blank">
 				<?php _e( 'Showcase', 'impactshirts' ); ?></a>
 
-			<a class="button" href="<?php echo esc_url( 'http://cyberchimps.com/store/' ); ?>" title="<?php esc_attr_e( 'More Themes', 'impactshirts' ); ?>" target="_blank">
+			<a class="button" href="<?php echo esc_url( 'http://wisersites.com/store/' ); ?>" title="<?php esc_attr_e( 'More Themes', 'impactshirts' ); ?>" target="_blank">
 				<?php _e( 'More Themes', 'impactshirts' ); ?></a>
 
 		</div>
@@ -146,7 +148,7 @@ function impactshirts_install_plugins() {
 	}
 
 }
-add_action( 'tgmpa_register', 'impactshirts_install_plugins' );
+//add_action( 'tgmpa_register', 'impactshirts_install_plugins' ); //GX can remove
 
 /*
  * Add notification to Reading Settings page to notify if Custom Front Page is enabled.

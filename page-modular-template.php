@@ -549,7 +549,7 @@ Template Name: Modular Landing Page
 //                        asort($posts);
 			echo '<ul>';
 			$post_counter = 0;
-
+                        $i = 0;
 			// Begin looping through the posts
 			if( count( $posts ) )
 				foreach( $posts as $post){

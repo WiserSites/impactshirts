@@ -53,6 +53,7 @@
                         "Select a Module Type...": "Select a Module Type...",
                         "textAndImage": "Banner",
                         "twobanners": "Two Column Banners",
+                        "responsive_banner": "Responsive banner",
                         "slider": "Slider",
                         "textBlock": "Text Block",
                         "designIdeas": "Three Column Banner",
@@ -122,7 +123,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "impactshirts-450",
+                    "preview_size": "responsive-450",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -1788,7 +1789,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "preview_size": "impactshirts-150",
+                    "preview_size": "responsive-150",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -1820,7 +1821,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "preview_size": "impactshirts-150",
+                    "preview_size": "responsive-150",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -2351,5 +2352,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1459157463
+    "modified": 1461140348
 }

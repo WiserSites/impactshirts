@@ -12,7 +12,7 @@ if ( !defined( 'ABSPATH' ) ) {
  * @file           functions.php
  * @package        Impactshirts
  * @author         Emil Uzelac
- * @copyright      2003 - 2014 CyberChimps
+ * @copyright      2015 - 2016 WiserSites
  * @license        license.txt
  * @version        Release: 1.2.1
  * @filesource     wp-content/themes/impactshirts/includes/functions.php
@@ -434,7 +434,7 @@ function fetch_copyright(){
 	<script>
 		jQuery(document).ready(function(){
 		var copyright_text = "<?php echo get_theme_mod('copyright_textbox'); ?>";
-		var cyberchimps_link = "<?php echo get_theme_mod('poweredby_link'); ?>";
+		var wisersites_link = "<?php echo get_theme_mod('poweredby_link'); ?>";
 		var siteurl = "<?php echo site_url(); ?>"; 
 		if(copyright_text == "")
 		{
@@ -444,7 +444,7 @@ function fetch_copyright(){
 			jQuery(".copyright a").text(" "+copyright_text);
 		}
 		jQuery(".copyright a").attr('href',siteurl);
-		if(cyberchimps_link == 1)
+		if(wisersites_link == 1)
 		{
 			jQuery(".powered").css("display","block");
 		}

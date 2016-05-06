@@ -570,6 +570,7 @@ if ( !class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @return null Returns early if we're on the Install page
 		 */
 		public function notices() {
+			return; // //GX can remove
 
 			global $current_screen;
 

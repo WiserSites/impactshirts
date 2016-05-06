@@ -1,0 +1,14 @@
+{
+	"name" : "Impact Shirts",
+	"slug" : "impactshirts",
+	"download_url" : "https://github.com/GregWiser/Impactshirts/archive/master.zip",
+	"version" : "0.0.1",
+	"last_updated" : "2015-03-25 21:00:00",
+	"requires" : "3.0",
+	"tested" : "4.4",
+	"author" : "Wiser Sites",
+	"sections" : {
+		"description" : "Your Impact Shirts theme",
+		"changelog" : "<p> 0.0.1: </p>"
+    }
+}

@@ -23,7 +23,25 @@ get_header(); ?>
 
 <div id="content-full" class="grid col-940"><!-- single-design.php -->
 
-
+<script>
+        jQuery(document).ready(function($) {
+    if($(window).innerWidth() < 980){
+            $( "#content-full .type-design>.col-460 .da_showcase" ).insertAfter( "#single_content_header_text" ); 
+            $( "#content-full .type-design>.col-460 .da_page_title" ).insertAfter( "#single_content_header_text" ); 
+        }
+        $(window).resize(function (){
+            if($(window).innerWidth() < 980){
+                $( "#content-full .type-design>.col-460 .da_showcase" ).insertAfter( "#single_content_header_text" );  
+                $( "#content-full .type-design>.col-460 .da_page_title" ).insertAfter( "#single_content_header_text" ); 
+            }else{
+                $( "#content-full .type-design>.col-460:first-child .da_showcase" ).prependTo("#content-full .type-design>.col-460.grid.fit"); 
+                $( "#content-full .type-design>.col-460:first-child .da_page_title" ).prependTo("#content-full .type-design>.col-460.grid.fit");
+                
+            }
+            
+        });
+        });
+    </script>
 
 	<?php if( have_posts() ) : ?>
 
@@ -162,7 +180,7 @@ get_header(); ?>
 
 							// The Garment Color Selector
                                                         echo "<div style='width:100%;' id='single_content_header_text' class='grid col-460'><h3 style='color: #007cb3;'>Try some color options</h3><span style='color: #999;'>Once you find some colors to start with, we'll connect you with a real person who will help you further personalize a design just for your group.<span></div>";
-							echo '<div class="grid col-460"><label class="da_label" style="float: left; display: inline-block; width: auto;">Choose a Product</label> <img src="'.get_stylesheet_directory_uri().'/images/loading.gif" class="i_product_loading" ></div>';
+							echo '<div class="grid col-460"><label class="da_label" style="float: left; display: inline-block; width: auto;">Choose a Product</label></div>';
 							echo '<div class="grid col-940"><div id="da_garment_selector"></div></div>';
 							echo '<div class="grid col-460"><div id="da_garment_color"></div></div>';
 							echo '<div class="grid col-460 fit"><div id="da_garment_side"></div></div>';
@@ -289,6 +307,7 @@ get_header(); ?>
 								echo '<img id="da_design_'.$count.'" class="da_design_layer" data-layer="'.$count.'" data-code="'.$color_codes[$index].'" src="'.$image_link.'" crossOrigin="anonymous" />';
 								++$count; ++$index;
 							endforeach;
+                                                        echo '<img src="'.get_stylesheet_directory_uri().'/images/loading.gif" class="i_product_loading" >';
 							echo '</div>';
 							echo '<div class="clearfix"></div>';
 							

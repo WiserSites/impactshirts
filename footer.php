@@ -12,7 +12,7 @@ if( !defined( 'ABSPATH' ) ) {
  * @file           footer.php
  * @package        Impactshirts
  * @author         Emil Uzelac
- * @copyright      2003 - 2014 CyberChimps
+ * @copyright      2015 - 2016 WiserSites
  * @license        license.txt
  * @version        Release: 1.2
  * @filesource     wp-content/themes/impactshirts/footer.php

@@ -836,8 +836,8 @@ msgstr "CSS-stijlen"
 
 #. Author of the plugin/theme
 # INSTRUCTION: Author of the plugin/theme
-msgid "CyberChimps.com"
-msgstr "CyberChimps.com"
+msgid "WiserSites.com"
+msgstr "WiserSites.com"
 
 #: header.php
 msgid "&darr; Skip to Main Content"
@@ -871,13 +871,13 @@ msgstr "Help"
 
 #. Author URI of the plugin/theme
 # INSTRUCTION: Author URI of the plugin/theme
-msgid "http://cyberchimps.com"
-msgstr "http://cyberchimps.com"
+msgid "http://wisersites.com"
+msgstr "http://wisersites.com"
 
 #. Theme URI of the plugin/theme
 # INSTRUCTION: Theme URI of the plugin/theme
-msgid "http://cyberchimps.com/impactshirts-theme/"
-msgstr "http://cyberchimps.com/impactshirts-theme/"
+msgid "http://wisersites.com/impactshirts-theme/"
+msgstr "http://wisersites.com/impactshirts-theme/"
 
 #: core/includes/functions.php
 msgid "Installing Plugin: %s"
@@ -972,8 +972,8 @@ msgstr "Impactshirts functies toevoegen"
 
 #. Description of the plugin/theme
 # INSTRUCTION: Description of the plugin/theme
-msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Official support forum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
-msgstr "Het Impactshirts thema is een flexibele basis met een veerkrachtig rastersysteem dat de weergave van uw website aanpast aan elk platform (Desktop, tablet, smartphone, enz.). Het thema heeft 9 paginasjablonen, 11 widget-gebieden, 6 sjabloonlayouts, 4 menuposities en meer. Krachtige maar eenvoudige themaopties voor volledige CMS-controle met eenvoudige logo-upload, hulpmiddelen voor sociale netwerken en webmasters enz. Impactshirts is compatibel met WooCommerce, meertalig (WPML), ondersteuning voor talen die van rechts naar links (RTL) worden geschreven, Retina-ready, zoekmachinevriendelijk, W3C-opmaak gevalideerd en momenteel vertaald naar 45 talen. Cross-browser compatibel.  <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Officieel ondersteuningsforum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
+msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://wisersites.com/forum/free/impactshirts/\">Official support forum</a> (http://wisersites.com/forum/free/impactshirts/)"
+msgstr "Het Impactshirts thema is een flexibele basis met een veerkrachtig rastersysteem dat de weergave van uw website aanpast aan elk platform (Desktop, tablet, smartphone, enz.). Het thema heeft 9 paginasjablonen, 11 widget-gebieden, 6 sjabloonlayouts, 4 menuposities en meer. Krachtige maar eenvoudige themaopties voor volledige CMS-controle met eenvoudige logo-upload, hulpmiddelen voor sociale netwerken en webmasters enz. Impactshirts is compatibel met WooCommerce, meertalig (WPML), ondersteuning voor talen die van rechts naar links (RTL) worden geschreven, Retina-ready, zoekmachinevriendelijk, W3C-opmaak gevalideerd en momenteel vertaald naar 45 talen. Cross-browser compatibel.  <a href=\"http://wisersites.com/forum/free/impactshirts/\">Officieel ondersteuningsforum</a> (http://wisersites.com/forum/free/impactshirts/)"
 
 #: core/includes/functions.php
 msgid "Return to Required Plugins Installer"

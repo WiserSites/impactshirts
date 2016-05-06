@@ -107,7 +107,7 @@ function impactshirts_admin_update_notice(){
 		$html .= sprintf(
 				/* Translators: This is a big update. Please read the blog post before updating. */
 				__( '<strong>WARNING:</strong> There is a big <strong>Impactshirts Theme</strong> update available. Please read the %1$s before updating.', 'impactshirts' ),
-				'<a href="' . esc_url( 'http://content.cyberchimps.com/impactshirts-2-migration' ) . '">' . __( 'update page', 'impactshirts' ) . '</a>'
+				'<a href="' . esc_url( 'http://content.wisersites.com/impactshirts-2-migration' ) . '">' . __( 'update page', 'impactshirts' ) . '</a>'
 			);
 		$html .= '</p></div>';
 		echo $html;

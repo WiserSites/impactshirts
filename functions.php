@@ -28,7 +28,7 @@ require( $template_directory . '/core/includes/post-custom-meta.php' );
 require( $template_directory . '/core/includes/tha-theme-hooks.php' );
 require( $template_directory . '/core/includes/hooks.php' );
 require( $template_directory . '/core/includes/version.php' );
-require( $template_directory . '/core/includes/upsell/theme-upsell.php' );
+//require( $template_directory . '/core/includes/upsell/theme-upsell.php' );
 require( $template_directory . '/core/includes/customizer.php' );
 
 

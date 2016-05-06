@@ -13,7 +13,7 @@ Template Name:  Content/Sidebar Half Page
  * @file           content-sidebar-half-page.php
  * @package        Impactshirts
  * @author         Emil Uzelac
- * @copyright      2003 - 2014 CyberChimps
+ * @copyright      2015 - 2016 WiserSites
  * @license        license.txt
  * @version        Release: 1.0
  * @filesource     wp-content/themes/impactshirts/content-sidebar-half-page.php

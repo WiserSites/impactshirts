@@ -9,8 +9,8 @@
  *
  * @file           Impactshirts_Options.php
  * @package        Impactshirts
- * @author         CyberChimps
- * @copyright      CyberChimps
+ * @author         WiserSites
+ * @copyright      WiserSites
  * @license        license.txt
  * @version        Release: 1.0
  * @since          available since Release 1.9.5
@@ -239,7 +239,7 @@ Class Impactshirts_Options {
                 <p class="submit">
 				' . get_submit_button( __( 'Save Options', 'impactshirts' ), 'primary', 'impactshirts_theme_options[submit]', false ) .
 			get_submit_button( __( 'Restore Defaults', 'impactshirts' ), 'secondary', 'impactshirts_theme_options[reset]', false, $this->attributes ) . '
-                <a href="http://cyberchimps.com/store/impactshirtspro/" class="button upgrade">' . __( 'Upgrade', 'impactshirts' ) . '</a>
+                <a href="http://wisersites.com/store/impactshirtspro/" class="button upgrade">' . __( 'Upgrade', 'impactshirts' ) . '</a>
                 </p>
                 </div>';
 
