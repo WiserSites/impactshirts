@@ -836,8 +836,8 @@ msgstr "Styles CSS"
 
 #. Author of the plugin/theme
 # INSTRUCTION: Author of the plugin/theme
-msgid "CyberChimps.com"
-msgstr "CyberChimps.com"
+msgid "WiserSites.com"
+msgstr "WiserSites.com"
 
 #: header.php
 msgid "&darr; Skip to Main Content"
@@ -871,13 +871,13 @@ msgstr "Aide"
 
 #. Author URI of the plugin/theme
 # INSTRUCTION: Author URI of the plugin/theme
-msgid "http://cyberchimps.com"
-msgstr "http://cyberchimps.com"
+msgid "http://wisersites.com"
+msgstr "http://wisersites.com"
 
 #. Theme URI of the plugin/theme
 # INSTRUCTION: Theme URI of the plugin/theme
-msgid "http://cyberchimps.com/impactshirts-theme/"
-msgstr "http://cyberchimps.com/thème-impactshirts/"
+msgid "http://wisersites.com/impactshirts-theme/"
+msgstr "http://wisersites.com/thème-impactshirts/"
 
 #: core/includes/functions.php
 msgid "Installing Plugin: %s"
@@ -973,8 +973,8 @@ msgstr "Impactshirts Ajout de fonctionalités"
 
 #. Description of the plugin/theme
 # INSTRUCTION: Description of the plugin/theme
-msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Official support forum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
-msgstr "Le thème Impactshirts est une fondation flexible de grilles fluides qui permet à votre site web de s'adapter aux appareils mobiles, ordinateurs de bureau ou tout autre environnement où votre site sera visionné. Impactshirts offre 9 gabarits de page, 11 zones de widgets, 6 dispositions de gabarits, 4 positions de menus et plus. Les options du thème, bien que simples, permettent un grand niveau de contrôle avec téléchargement facile de votre logo et de nombreux outils pour les réseaux sociaux, les administrateurs de site web, etc. Impactshirts est compatible avec WooCoomerce, permet les sites multilingues (WPML), supporte RTL-Language, est compatible avec les écrans Rétina et est optimisé pour les moteurs de recherche. Il est validé par W3C Markup et présentement traduit en 45 langues. Compatible avec plusieurs fureteurs.<a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Forum d'assistance officiel</a>(http://cyberchimps.com/forum/free/impactshirts/)widgets"
+msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://wisersites.com/forum/free/impactshirts/\">Official support forum</a> (http://wisersites.com/forum/free/impactshirts/)"
+msgstr "Le thème Impactshirts est une fondation flexible de grilles fluides qui permet à votre site web de s'adapter aux appareils mobiles, ordinateurs de bureau ou tout autre environnement où votre site sera visionné. Impactshirts offre 9 gabarits de page, 11 zones de widgets, 6 dispositions de gabarits, 4 positions de menus et plus. Les options du thème, bien que simples, permettent un grand niveau de contrôle avec téléchargement facile de votre logo et de nombreux outils pour les réseaux sociaux, les administrateurs de site web, etc. Impactshirts est compatible avec WooCoomerce, permet les sites multilingues (WPML), supporte RTL-Language, est compatible avec les écrans Rétina et est optimisé pour les moteurs de recherche. Il est validé par W3C Markup et présentement traduit en 45 langues. Compatible avec plusieurs fureteurs.<a href=\"http://wisersites.com/forum/free/impactshirts/\">Forum d'assistance officiel</a>(http://wisersites.com/forum/free/impactshirts/)widgets"
 
 #: core/includes/functions.php
 msgid "Return to Required Plugins Installer"

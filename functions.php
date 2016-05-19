@@ -15,6 +15,8 @@ if ( !defined( 'ABSPATH' ) ) {
  */
 
 $template_directory = get_template_directory();
+//$template_directory = str_replace( 'responsive', 'impactshirts', $template_directory);
+//require( $template_directory . '/functions/version-acf-fields.php' );
 
 require( $template_directory . '/core/includes/functions.php' );
 require( $template_directory . '/core/includes/functions-update.php' );

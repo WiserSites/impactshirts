@@ -6,7 +6,6 @@
             "key": "field_542ebfc71fbdb",
             "label": "Related Designs and\/or garments",
             "name": "relatedDesigns",
-            "prefix": "",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -42,5 +41,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426096484
+    "active": 1,
+    "description": "",
+    "modified": 1463570199
 }

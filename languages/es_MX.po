@@ -819,8 +819,8 @@ msgstr "Estilos CSS"
 
 #. Author of the plugin/theme
 # INSTRUCTION: Author of the plugin/theme
-msgid "CyberChimps.com"
-msgstr "CyberChimps.com"
+msgid "WiserSites.com"
+msgstr "WiserSites.com"
 
 #: header.php
 msgid "&darr; Skip to Main Content"
@@ -850,12 +850,12 @@ msgstr "Ayuda"
 
 #. Author URI of the plugin/theme
 # INSTRUCTION: Author URI of the plugin/theme
-msgid "http://cyberchimps.com"
-msgstr "http://cyberchimps.com"
+msgid "http://wisersites.com"
+msgstr "http://wisersites.com"
 
 #. Theme URI of the plugin/theme
 # INSTRUCTION: Theme URI of the plugin/theme
-msgid "http://cyberchimps.com/impactshirts-theme/"
+msgid "http://wisersites.com/impactshirts-theme/"
 msgstr ""
 
 msgid "Installing Plugin: %s"
@@ -935,7 +935,7 @@ msgstr "características Responsivo"
 
 #. Description of the plugin/theme
 # INSTRUCTION: Description of the plugin/theme
-msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Official support forum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
+msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://wisersites.com/forum/free/impactshirts/\">Official support forum</a> (http://wisersites.com/forum/free/impactshirts/)"
 msgstr ""
 
 msgid "Return to Required Plugins Installer"

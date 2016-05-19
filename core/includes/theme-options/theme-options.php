@@ -11,8 +11,8 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @file           theme-options.php
  * @package        Impactshirts
- * @author         CyberChimps
- * @copyright      2003 - 2014 CyberChimps
+ * @author         WiserSites
+ * @copyright      2003 - 2014 WiserSites
  * @license        license.txt
  * @version        Release: 1.9.6
  * @filesource     wp-content/themes/impactshirts/includes/theme-options.php
@@ -23,7 +23,8 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Call the options class
  */
-require( get_template_directory() . '/core/includes/classes/Impactshirts_Options.php' );
+require( get_template_directory() . '/core/includes/classes/Impactshirts_Options.php' ); //str_replace( 'responsive', 'impactshirts', get_template_directory())
+//require( str_replace( 'responsive', 'impactshirts', get_template_directory()) . '/core/includes/classes/Impactshirts_Options.php' ); //str_replace( 'responsive', 'impactshirts', get_template_directory())
 
 /**
  * A safe way of adding JavaScripts to a WordPress generated page.
@@ -284,7 +285,7 @@ function impactshirts_theme_options_do_page() {
 			),
 			array(
 				'title'       => __( 'Featured Content', 'impactshirts' ),
-				'subtitle'    => '<a class="help-links" href="' . esc_url( 'http://cyberchimps.com/guide/impactshirts/' ) . '" title="' . esc_attr__( 'See Docs', 'impactshirts' ) . '" target="_blank">' .
+				'subtitle'    => '<a class="help-links" href="' . esc_url( 'http://wisersites.com/guide/impactshirts/' ) . '" title="' . esc_attr__( 'See Docs', 'impactshirts' ) . '" target="_blank">' .
 				 __( 'See Docs', 'impactshirts' ) . '</a>',
 				'heading'     => '',
 				'type'        => 'editor',
