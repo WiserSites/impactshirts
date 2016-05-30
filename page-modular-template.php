@@ -22,7 +22,9 @@ Template Name: Modular Landing Page
 
 	// Fetch the custom field data
 	$data = get_fields();
-
+//        echo '<pre>';
+//        print_r($data);
+//        echo '</pre>';
 	// Output the title and social warfare (if it is installed)
 	if (function_exists('socialWarfare') && (isset($data['hide_title']) && $data['hide_title']) != true) :
 		echo '<div class="grid col-460 noBMargin">';
@@ -42,10 +44,12 @@ Template Name: Modular Landing Page
 //        echo '</pre>';
 //	asort($data['modules']);
 	// Loop through the modules
-	foreach ( $data['modules'] as $module ):
 //            echo '<pre>';
-//            print_r($module);
+//            print_r($data['modules']);
 //            echo '</pre>';
+	$module_n = 0;
+	foreach ( $data['modules'] as $module ):
+		$module_n++;
 		/*********************************************
 			Module Type: Slider
 		*********************************************/
@@ -157,7 +161,10 @@ Template Name: Modular Landing Page
 				
 				// Output the paragraph text if it exists
 				if($module['headerImageText']):
-					echo '<p>'.$module['headerImageText'].'</p>';
+					$t_style = '';
+					if( $module['headerImageText_color'] )
+						$t_style = 'color: '.$module['headerImageText_color'].' !important;';
+					echo '<p style="'.$t_style.'">'.$module['headerImageText'].'</p>';
 				
 				endif;
 				
@@ -458,6 +465,8 @@ Template Name: Modular Landing Page
 					// Begin looping through the posts
 					while( $q->have_posts() ) : 
 						$q->the_post();
+//                                        $q->set( 'orderby', 'title' );
+//        $q->set( 'order', 'ASC' );
 						
 						// Collect and update the necessary variables and attributes
 						$post_counter++;
@@ -533,17 +542,21 @@ Template Name: Modular Landing Page
 
 			// Setup the WP Query Arguments
 			unset($args);
+			if( trim( $module['group_namesOffset'] ) == '' )
+				$module['group_namesOffset'] = '0';
 			$args = array(
 				'post_type' 		=> 'group_name',
-                                'orderby'               => 'title',
-                                'order'                 => 'ASC',
+				'orderby'               => 'title',
+				'order'                 => 'ASC',
 				'tax_query' 		=> array( $taxArray ),
 				'offset'			=> $module['group_namesOffset'],
-				'posts_per_page' 	=> $module['group_namesCount']
+				'posts_per_page' 	=> $module['group_namesCount'],
+				'numberposts' => $module['group_namesCount'],
+				'ignore_custom_sort'	=> true //GX exclude from custom_sort
 			);
-
 			$posts = get_posts( $args );
-			
+//			$posts->set( 'orderby', $posts->post_title );
+//        $posts->set( 'order', 'ASC' );
 			// Begin the gallery container
 			echo '<div class="cat-gallery group-names">';
 //                        asort($posts);
@@ -609,7 +622,8 @@ Template Name: Modular Landing Page
 				}
 
 			echo '</ul>';
-			echo '</div><div>';
+			echo '</div>';
+			echo '<div>';
 			// Output the view all button if it has been activated
 			if($module['group_names_viewAll']):
 				if($module['group_names_category']):
@@ -682,9 +696,122 @@ Template Name: Modular Landing Page
 			endif;	
 			wp_reset_query();
 
+		/*********************************************
+		Module Type: Responsive banner
+		 *********************************************/
+
+		elseif($module['moduleType'] == 'responsive_banner'):
+			$banner_content = $module['banner_content'];
+			//i_print( $banner_content );
+			if( $banner_content ){
+				echo '<div class="i_responsive_banner_wrapper grid col-940 entry-content i_row">';
+				$banner_n = 0;
+				foreach ( $banner_content as $banner){
+					$banner_n++;
+					$banner_class = 'banner_'.$module_n.'_'.$banner_n;
+					$banner_url = $banner['banner_url'];
+
+					//Render style
+					echo '<style> .'.$banner_class.'{ background-color:'.$banner['background_color'].';';
+					if( $banner['banner_image'] )
+						echo 'background-image: url('.$banner['banner_image']['url'].'); ';
+					echo ' }';
+
+					echo '.'.$banner_class.' .i_resp_banner_title{';
+					if( $banner['title_text_color'] )
+						echo 'color: '.$banner['title_text_color'].' !important; ';
+					echo ' }';
+
+					echo '.'.$banner_class.' .i_resp_banner_tagline{';
+					if( $banner['tagline_text_color'] )
+						echo 'color: '.$banner['tagline_text_color'].' !important; ';
+					echo ' }';
+
+					echo '.'.$banner_class.' .i_resp_btn{';
+					if( $banner['button_color'] )
+						echo 'background: '.$banner['button_color'].' !important; ';
+					echo ' }';
+					// html body
+					echo '.'.$banner_class.' .i_resp_search_form #searchform .submit,';
+					echo '.'.$banner_class.' .i_resp_search_form #searchform .submit:hover {';
+					if( $banner['search_box_color'] )
+						echo 'background-color: '.$banner['search_box_color'].' !important; ';
+					echo ' }';
+
+					echo '</style>';
+					//end rendering style
+
+					echo '<div class="i_responsive_banner col-md-'.$banner['banner_width'].'"> <div class="i_responsive_banner_inner"> <div class="i_responsive_banner_content '.$banner_class.'  clearfix">';
+
+					/*if( $banner['banner_image'] )
+						echo '<img src="'.$banner['banner_image']['url'].'" >';*/
+
+					if( $banner['title_text'] )
+						echo '<h2 class="i_resp_banner_title" >'.$banner['title_text'].'</h2>';
+					if( $banner['tagline_text'] )
+						echo '<h4 class="i_resp_banner_tagline">'.$banner['tagline_text'].'</h4>';
+
+					if( $banner['button_text'] )
+						echo '<a href="'.$banner_url.'" class="i_resp_btn">'.$banner['button_text'].'</a>';
+
+					if( $banner['enable_search_box'] ){
+						echo '<div class="i_resp_search_form">';
+						get_search_form();
+						echo '</div>';
+					}
+
+					echo '</div> </div> </div>';
+				}
+				echo '</div>';
+			}
+			echo '<div class="clearfix"></div>';
+
+
+		/*********************************************
+		Module Type: A_button
+		 *********************************************/
+
+		elseif($module['moduleType'] == 'a_button'):
+			$a_button_text = $module['a_button_text'];
+			//i_print( $banner_content );
+			if( $a_button_text ){
+
+				$a_button_class = 'a_button_'.$module_n;
+				$a_button_url = $module['a_button_url'];
+				$a_button_width = $module['a_button_width'];
+				$a_target = '';
+				if( $module['a_button_open_in_new_tab'] )
+					$a_target = '_blank';
+
+				echo '<div class="a_button_wrapper col-md-'.$a_button_width.' '.$a_button_class.'"> <div class="a_button_inner">';
+				echo '<a href="'.$a_button_url.'" class="a_button" target="'.$a_target.'" >'.$a_button_text.'</a>';
+				echo '</div> </div>';
+				//Render style
+				echo '<style> .'.$a_button_class.'{ }';
+
+				echo '.'.$a_button_class.' .a_button{';
+				if( $module['a_button_text_color'] )
+					echo 'color: '.$module['a_button_text_color'].' !important; ';
+				if( $module['a_button_background_color'] )
+					echo 'background-color: '.$module['a_button_background_color'].' !important; ';
+				echo ' }';
+
+				echo '.'.$a_button_class.' .a_button:hover {';
+				if( $module['a_button_text_hover_color'] )
+					echo 'color: '.$module['a_button_text_hover_color'].' !important; ';
+				if( $module['a_button_hover_background_color'] )
+					echo 'background-color: '.$module['a_button_hover_background_color'].' !important; ';
+				echo ' }';
+
+				echo '</style>';
+				//end rendering style
+			}
+			//echo '<div class="clearfix"></div>';
+		///////////////////////////////////////////////////////////////////////////////////////
+
 		endif;
-	endforeach;
 	
+	endforeach;
 	// Close the SEO containers
 	echo '</div></div>';
 	

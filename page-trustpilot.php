@@ -33,11 +33,11 @@ get_header();
 	<div class="tp-box-header">
 		<div class="trustpilotBigStars floatLeft">
 			<!--<span class="text20 centre"><?php // echo $json->TrustScore->Human; ?></span>-->
-			<span class="text20 centre"><?php echo (isset($json->TrustScore->Human)) ? $json->TrustScore->Human : ""; ?></span>
+                        <span class="text20 centre"><?php echo (isset($json->TrustScore->Human)) ? $json->TrustScore->Human : ""; ?></span>
 		</div>
 		<div class="floatRight">
 			<!--<span class="text24"><strong><?php // echo number_format($reviews); ?>+</strong><br><span class="text16">customer reviews</span></span>-->
-                        <span class="text24"><strong><?php echo (isset($reviews)) ?  number_format($reviews) : ""; ?>+</strong><br><span class="text16">customer reviews</span></span>
+			<span class="text24"><strong><?php echo (isset($reviews)) ?  number_format($reviews) : ""; ?>+</strong><br><span class="text16">customer reviews</span></span>
 		 </div>
 		 <div class="clearfix"></div>
 	</div>
@@ -63,7 +63,7 @@ get_header();
 </div>
 <div class="tp-box-footer">
 <!--<a class="footer" href="<?php // echo $json->ReviewPageUrl; ?>" target="_blank">Leave your own review!</a>-->
-<a class="footer" href="<?php echo (isset($json->ReviewPageUrl)) ?  $json->ReviewPageUrl : ""; ?>" target="_blank">Leave your own review!</a>
+    <a class="footer" href="<?php echo (isset($json->ReviewPageUrl)) ?  $json->ReviewPageUrl : ""; ?>" target="_blank">Leave your own review!</a>
 </div> 
 
 <?php

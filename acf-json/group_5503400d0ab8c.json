@@ -3,7 +3,7 @@
     "title": "Modular Landing Page",
     "fields": [
         {
-            "key": "field_569eb362e9c8d",
+            "key": "field_569eb362e9c8d__trashed",
             "label": "Hide Title & Social Sharing Options?",
             "name": "hide_title",
             "type": "true_false",
@@ -19,7 +19,7 @@
             "default_value": 0
         },
         {
-            "key": "field_5503404a7caae",
+            "key": "field_5503404a7caae__trashed",
             "label": "Modules",
             "name": "modules",
             "type": "repeater",
@@ -164,7 +164,8 @@
                     "other_choice": 0,
                     "save_other_choice": 0,
                     "default_value": "",
-                    "layout": "horizontal"
+                    "layout": "horizontal",
+                    "allow_null": 0
                 },
                 {
                     "key": "field_55bfa14ab8819",
@@ -292,7 +293,7 @@
                     "disabled": 0
                 },
                 {
-                    "key": "field_573aee75e76f1",
+                    "key": "field_573af15936485",
                     "label": "Header Image Paragraph Color",
                     "name": "headerImageText_color",
                     "type": "color_picker",
@@ -312,7 +313,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#ffffff"
+                    "default_value": "#FFFFFF"
                 },
                 {
                     "key": "field_5503428603e6c",
@@ -347,7 +348,8 @@
                     "other_choice": 0,
                     "save_other_choice": 0,
                     "default_value": "",
-                    "layout": "horizontal"
+                    "layout": "horizontal",
+                    "allow_null": 0
                 },
                 {
                     "key": "field_5503453396414",
@@ -1229,7 +1231,8 @@
                     "other_choice": 0,
                     "save_other_choice": 0,
                     "default_value": "",
-                    "layout": "vertical"
+                    "layout": "vertical",
+                    "allow_null": 0
                 },
                 {
                     "key": "field_550d9b1de9a2c",
@@ -1540,7 +1543,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "min": "",
+                    "min": 0,
                     "max": "",
                     "step": "",
                     "readonly": 0,
@@ -2341,482 +2344,6 @@
                     "load_terms": 0,
                     "return_format": "id",
                     "multiple": 0
-                },
-                {
-                    "key": "field_57397a8a38575",
-                    "label": "Banner content",
-                    "name": "banner_content",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "responsive_banner"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": "",
-                    "max": "",
-                    "layout": "block",
-                    "button_label": "Add Banner",
-                    "sub_fields": [
-                        {
-                            "key": "field_57397adf38576",
-                            "label": "Banner image",
-                            "name": "banner_image",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 33,
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5739a88141bdd",
-                            "label": "Background Color",
-                            "name": "background_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 33,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#FFFFFF"
-                        },
-                        {
-                            "key": "field_57397afd38577",
-                            "label": "Banner Width",
-                            "name": "banner_width",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 33,
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "12": "Full ( 100% )",
-                                "11": 11,
-                                "10": 10,
-                                "9": 9,
-                                "8": 8,
-                                "7": 7,
-                                "6": "Half ( 50% )",
-                                "5": 5,
-                                "4": "33%",
-                                "3": "25%",
-                                "2": 2,
-                                "1": 1
-                            },
-                            "default_value": [
-                                12
-                            ],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "disabled": 0,
-                            "readonly": 0
-                        },
-                        {
-                            "key": "field_57397b8038578",
-                            "label": "Banner URL",
-                            "name": "banner_url",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 100,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_5739962c12bcd",
-                            "label": "Title text",
-                            "name": "title_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 60,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_573996ad12bce",
-                            "label": "Title text color",
-                            "name": "title_text_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 40,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#FFFFFF"
-                        },
-                        {
-                            "key": "field_573996b412bcf",
-                            "label": "Tagline text",
-                            "name": "tagline_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 60,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_573996c312bd0",
-                            "label": "Tagline text color",
-                            "name": "tagline_text_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 40,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#FFFFFF"
-                        },
-                        {
-                            "key": "field_573994a012bca",
-                            "label": "Button Text",
-                            "name": "button_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 60,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_5739970612bd1",
-                            "label": "Button color",
-                            "name": "button_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 40,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#0971a8"
-                        },
-                        {
-                            "key": "field_5739973812bd2",
-                            "label": "Enable search box",
-                            "name": "enable_search_box",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 50,
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0
-                        },
-                        {
-                            "key": "field_5739c87b1fe77",
-                            "label": "Search box submit color",
-                            "name": "search_box_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 50,
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#FFFFFF"
-                        }
-                    ]
-                },
-                {
-                    "key": "field_573afa874c299",
-                    "label": "A Button text",
-                    "name": "a_button_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_573afe3f4c29e",
-                    "label": "A Button width",
-                    "name": "a_button_width",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "12": "Full ( 100% )",
-                        "11": 11,
-                        "10": 10,
-                        "9": 9,
-                        "8": 8,
-                        "7": 7,
-                        "6": "Half ( 50% )",
-                        "5": 5,
-                        "4": "33%",
-                        "3": "25%",
-                        "2": 2,
-                        "1": 1
-                    },
-                    "default_value": [
-                        12
-                    ],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "disabled": 0,
-                    "readonly": 0
-                },
-                {
-                    "key": "field_573b00928dc70",
-                    "label": "A Button URL",
-                    "name": "a_button_url",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_573b026d8dc71",
-                    "label": "Open In new tab ?",
-                    "name": "a_button_open_in_new_tab",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0
-                },
-                {
-                    "key": "field_573afd0a4c29a",
-                    "label": "A Button text color",
-                    "name": "a_button_text_color",
-                    "type": "color_picker",
-                    "instructions": "Button text color",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#0066cc"
-                },
-                {
-                    "key": "field_573afd9e4c29c",
-                    "label": "A Button text hover color",
-                    "name": "a_button_text_hover_color",
-                    "type": "color_picker",
-                    "instructions": "Hover color",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#efefef"
-                },
-                {
-                    "key": "field_573afd694c29b",
-                    "label": "A Button background color",
-                    "name": "a_button_background_color",
-                    "type": "color_picker",
-                    "instructions": "Button background color",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#efefef"
-                },
-                {
-                    "key": "field_573afdf24c29d",
-                    "label": "A Button hover background color",
-                    "name": "a_button_hover_background_color",
-                    "type": "color_picker",
-                    "instructions": "Hover background color",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_550340757caaf",
-                                "operator": "==",
-                                "value": "a_button"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 50,
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#0066cc"
                 }
             ],
             "collapsed": ""
@@ -2852,5 +2379,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1463570196
+    "modified": 1464098881
 }

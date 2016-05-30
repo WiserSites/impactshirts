@@ -146,6 +146,7 @@ if ( 'posts' == get_option( 'show_on_front' ) && $impactshirts_options['front_pa
             </div>
         </div>
         <?php endif; ?>
+</div>
 
 	<?php
 	get_footer();

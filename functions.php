@@ -15,8 +15,7 @@ if ( !defined( 'ABSPATH' ) ) {
  */
 
 $template_directory = get_template_directory();
-//$template_directory = str_replace( 'responsive', 'impactshirts', $template_directory);
-//require( $template_directory . '/functions/version-acf-fields.php' );
+require( $template_directory . '/functions/version-acf-fields.php' );
 
 require( $template_directory . '/core/includes/functions.php' );
 require( $template_directory . '/core/includes/functions-update.php' );
@@ -30,7 +29,7 @@ require( $template_directory . '/core/includes/post-custom-meta.php' );
 require( $template_directory . '/core/includes/tha-theme-hooks.php' );
 require( $template_directory . '/core/includes/hooks.php' );
 require( $template_directory . '/core/includes/version.php' );
-//require( $template_directory . '/core/includes/upsell/theme-upsell.php' );
+require( $template_directory . '/core/includes/upsell/theme-upsell.php' );
 require( $template_directory . '/core/includes/customizer.php' );
 
 
@@ -631,8 +630,8 @@ function addThemeStyles() {
                     #footer input[type="submit"] {border:'.$options['menuBar'].'!important;background:'.$options['menuBar'].'!important;color:'.$options['mainNavTextActive'].'!important}
 		.menu li.current-menu-item a {color:'.$options['mainNavTextActive'].'!important}
 		.menu li:hover>a {background-color:'.$options['mainNavHover'].'!important}
-		#menu-main-nav.menu li li>a {background-color:'.$options['menuBar'].'!important}
-		#menu-main-nav.menu li li:hover>a {background-color:'.$options['mainNavHover'].'!important; color:'.$options['mainNavTextDefault'].'!important}
+		#menu-main-nav.menu li li>a,#menu-main.menu li  {background-color:'.$options['menuBar'].'!important}
+		#menu-main-nav.menu li:hover>a,#menu-main-nav.menu li li:hover>a,#menu-main.menu li:hover>a  {background-color:'.$options['mainNavHover'].'!important; color:'.$options['mainNavTextDefault'].'!important}
 		.menu li.current-menu-item a {background-color:'.$options['mainNavActive'].'!important}
 		.item-view, .item-view-gc {background-color:'.$options['designListingBar'].'!important}
 		.item-view p, .item-view-gc p {color:'.$options['designListingFont'].'!important}
@@ -688,6 +687,7 @@ function addThemeStyles() {
 			color: '.$options['buttonHoverText'].'!important;
 			border: 1px solid '.$options['buttonHoverBorder'].'!important;
 		}
+                #container #footer input[type="submit"],#container #footer input[type="submit"]:hover {background:'.$options['menuBar'].'!important;}
 		body .da_request_proof { background: '.$options['headerBar'].' !important; }
 		body .da_label { color: '.$options['h1'].' !important; }
 		body h1 { color: '.$options['h1'].'; }

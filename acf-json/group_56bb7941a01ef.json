@@ -111,7 +111,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "preview_size": "responsive-100",
+                    "preview_size": "impactshirts-100",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -195,5 +195,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1463570195
+    "modified": 1455128950
 }

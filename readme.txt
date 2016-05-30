@@ -4,7 +4,6 @@
 This and any other Theme provided by WiserSites should
 be free of bugs, however do note that we're only humans
 and if you spot a bug do us a favor and report here
-http://wisersites.com/forum/free/impactshirts/
 
 If something goes wrong, or you need our assistance with anything
 just register and post your question(s).

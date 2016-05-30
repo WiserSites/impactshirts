@@ -6,6 +6,7 @@
             "key": "field_5506f7ba3ce2d",
             "label": "Light Color Design",
             "name": "lightColorDesign",
+            "prefix": "",
             "type": "image",
             "instructions": "This is the light version of the design that will be used to overlay dark colored shirts. (405px by 500px with transparent background)",
             "required": 0,
@@ -30,6 +31,7 @@
             "key": "field_5506f7f53ce2e",
             "label": "Dark Color Design",
             "name": "darkColorDesign",
+            "prefix": "",
             "type": "image",
             "instructions": "This is the dark version of the design that will be used to overlay light colored shirts. (405px by 500px with transparent background)",
             "required": 0,
@@ -54,6 +56,7 @@
             "key": "field_5511662d6a977",
             "label": "Default Shirt Image",
             "name": "defaultShirtImage",
+            "prefix": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -78,6 +81,7 @@
             "key": "field_550894b7bc3b8",
             "label": "Default Design Preview",
             "name": "defaultDesignPreview",
+            "prefix": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -106,6 +110,7 @@
             "key": "field_5511667bd419f",
             "label": "Default Color Name",
             "name": "defaultColorName",
+            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -139,7 +144,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
-    "description": "",
-    "modified": 1463570195
+    "modified": 1427203728
 }

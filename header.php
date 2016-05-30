@@ -53,7 +53,30 @@ if( !defined( 'ABSPATH' ) ) {
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=179660798774296&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+
+
+jQuery(document).ready(function( $ ) {
+    var smallState = false;
+jQuery(window).scroll( function() {
+
+		if(jQuery(window).width() > 980) {
+			if(jQuery(window).scrollTop() > 75 && smallState != true ) {
+                            var smallState = true;
+                                jQuery('#fixedHeaderWrapper').addClass("stiky");
+			} else if(jQuery(window).scrollTop() < 75 && smallState == true) {
+                            var smallState = false;
+                                jQuery('#fixedHeaderWrapper').removeClass("stiky");
+                                
+			}else{
+                                jQuery('#fixedHeaderWrapper').removeClass("stiky");
+                            
+                        }
+		}
+	});
+    })
+</script>
+<!--<script src="<?php // echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>-->
 <?php impactshirts_container(); // before container hook ?>
 <div id="container" class="hfeed">
 

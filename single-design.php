@@ -22,8 +22,7 @@ if( !defined( 'ABSPATH' ) ) {
 get_header(); ?>
 
 <div id="content-full" class="grid col-940"><!-- single-design.php -->
-
-<script>
+    <script>
         jQuery(document).ready(function($) {
     if($(window).innerWidth() < 980){
             $( "#content-full .type-design>.col-460 .da_showcase" ).insertAfter( "#single_content_header_text" ); 
@@ -42,6 +41,7 @@ get_header(); ?>
         });
         });
     </script>
+
 
 	<?php if( have_posts() ) : ?>
 
@@ -307,8 +307,22 @@ get_header(); ?>
 								echo '<img id="da_design_'.$count.'" class="da_design_layer" data-layer="'.$count.'" data-code="'.$color_codes[$index].'" src="'.$image_link.'" crossOrigin="anonymous" />';
 								++$count; ++$index;
 							endforeach;
-                                                        echo '<img src="'.get_stylesheet_directory_uri().'/images/loading.gif" class="i_product_loading" >';
-							echo '</div>';
+//                                                        echo '<img src="'.get_stylesheet_directory_uri().'/images/loading.gif" class="i_product_loading" >';
+							echo '<div class="sk-fading-circle i_product_loading"">';
+                                                        echo '<div class="sk-circle1 sk-circle"></div>
+                                                                <div class="sk-circle2 sk-circle"></div>
+                                                                <div class="sk-circle3 sk-circle"></div>
+                                                                <div class="sk-circle4 sk-circle"></div>
+                                                                <div class="sk-circle5 sk-circle"></div>
+                                                                <div class="sk-circle6 sk-circle"></div>
+                                                                <div class="sk-circle7 sk-circle"></div>
+                                                                <div class="sk-circle8 sk-circle"></div>
+                                                                <div class="sk-circle9 sk-circle"></div>
+                                                                <div class="sk-circle10 sk-circle"></div>
+                                                                <div class="sk-circle11 sk-circle"></div>
+                                                                <div class="sk-circle12 sk-circle"></div>';
+                                                        echo '</div>';
+                                                        echo '</div>';
 							echo '<div class="clearfix"></div>';
 							
 							// The  Description

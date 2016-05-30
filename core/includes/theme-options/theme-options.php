@@ -12,7 +12,7 @@ if ( !defined( 'ABSPATH' ) ) {
  * @file           theme-options.php
  * @package        Impactshirts
  * @author         WiserSites
- * @copyright      2003 - 2014 WiserSites
+ * @copyright      2015 - 2016 WiserSites
  * @license        license.txt
  * @version        Release: 1.9.6
  * @filesource     wp-content/themes/impactshirts/includes/theme-options.php
@@ -23,8 +23,7 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Call the options class
  */
-require( get_template_directory() . '/core/includes/classes/Impactshirts_Options.php' ); //str_replace( 'responsive', 'impactshirts', get_template_directory())
-//require( str_replace( 'responsive', 'impactshirts', get_template_directory()) . '/core/includes/classes/Impactshirts_Options.php' ); //str_replace( 'responsive', 'impactshirts', get_template_directory())
+require( get_template_directory() . '/core/includes/classes/Impactshirts_Options.php' );
 
 /**
  * A safe way of adding JavaScripts to a WordPress generated page.

@@ -21,7 +21,22 @@ if( !defined( 'ABSPATH' ) ) {
  */
 
 get_header(); ?>
-
+<script>
+jQuery(document).ready(function($) {
+    $( "#nav-wrapper form" ).addClass("prevent_empty_submit_1");
+$( "#container .search_page_form form" ).addClass("prevent_empty_submit_2");
+$(document).on("submit", ".prevent_empty_submit_1,.prevent_empty_submit_2" ,function( event ) {
+  var search_value = $(this).find("input[type='text']").val();
+  if($.trim(search_value) == ""){
+  event.preventDefault();
+  $(this).find("input[type='text']").css({
+      'border':'2px solid red'
+  });
+  return false;
+   }
+});
+})
+</script>
 
 
 	<?php 
@@ -77,6 +92,7 @@ get_header(); ?>
 
 <?php
 		echo '<div id="wrapper" class="clearfix">';
+                if(trim($query_string) != ""){
 		echo '<div id="content-search" class="grid col-940" style="text-align:center;">';
  
 		// get_template_part( 'loop-header' ); ?>
@@ -130,7 +146,7 @@ get_header(); ?>
 		);
 
 		echo paginate_links( $args );
-
+                }
 		echo '</div>';
 		echo '</div>';
 

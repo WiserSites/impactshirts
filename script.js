@@ -4,7 +4,7 @@
 //Website: http://designwithpc.com
 //Twitter: http://twitter.com/chaudharyp
 
-console.log( 'v4.4.3' ); //GX version
+console.log( 'v4.4.5' ); //GX version
 var QueryString = function () {
   // This function is anonymous, is executed immediately and 
   // the return value is assigned to QueryString!
@@ -401,7 +401,7 @@ jQuery(document).ready(function( $ ) {
 				jQuery('#logo img')				.animate({			height:101			},speed);
 				jQuery('#header-wrapper')		.animate({			height:117			},speed);
 				jQuery('#top-widget')			.animate({			paddingTop:10 		},speed); 
-				jQuery('.menu a')				.animate({			paddingTop:4.8		},speed);
+//				jQuery('.menu a')				.animate({			paddingTop:4.8		},speed);
 				jQuery('.menu a')				.animate({			paddingBottom:4.8	},speed);
 				jQuery('.skip-container')		.animate({			padding:8			},speed); 
 				jQuery('.churchShirts h2')		.animate({			marginTop:10		},speed);
@@ -410,6 +410,7 @@ jQuery(document).ready(function( $ ) {
 				jQuery('.churchShirts p')		.slideDown(speed);
 				smallState = false;
                                 jQuery('#fixedHeaderWrapper').removeClass("stiky");
+                                
 			}
 		}
 	});
@@ -654,7 +655,26 @@ jQuery(document).ready(function( $ ) {
 			}   
 		});
 	};
-	
+
+	//GX start
+	function regenerate_canvas_by_colors(){
+		console.log( 'Starting regenerate_canvas_by_colors');
+		var col_n = 1, col_n_index = 0;
+		for( col_n = 1 ; col_n <= 6 ; col_n++ ){
+			//jQuery('#da_ink_color_3').ddslick('select', {index: jQuery(this).index()});
+			if( $('#da_ink_color_'+col_n).length){
+				//if( col_n_index == 0 ){
+					col_n_index = $('#da_ink_color_'+col_n).data('ddslick').selectedIndex;
+					$('#da_ink_color_'+col_n).ddslick('select', {index: col_n_index });
+				//}
+				/*if( $('#da_ink_color_'+col_n).data('ddslick').selectedIndex < 0 ){
+				 $('#da_ink_color_'+col_n).ddslick('select', {index: 0 }); //('#da_ink_color_3')
+				 console.log( 'Autoselect for '+ '#da_ink_color_'+col_n + ' because of index -1'  );
+				 }*/
+			}
+		}
+	}
+	//GX end
 	// Function for loading the design on page load
 	page_loaded = false;
 
@@ -668,6 +688,7 @@ jQuery(document).ready(function( $ ) {
 			imageURL = imageURL.replace('http://djigfogczfdpe.cloudfront.net/',home_url);
 			jQuery('#da_design_'+i).attr('src',imageURL);
 			// console.log(imageURL);
+
 		};
 		
 		i = 0;
@@ -692,7 +713,8 @@ jQuery(document).ready(function( $ ) {
 					i++;
 				} else {
 					clearInterval(build_canvas);
-					page_loaded = true;	
+					page_loaded = true;
+					setTimeout( function(){ regenerate_canvas_by_colors(); }, 500); //GX
 				};		
 			}
 		
@@ -917,7 +939,9 @@ jQuery(document).ready(function( $ ) {
 		  
 		  		//if found then use the current index number to make selected    
 		  		jQuery(element).ddslick('select', {index: jQuery(this).index()});
-	  		}
+	  		} else {
+				//jQuery(element).ddslick('select', {index: 1}); //GX
+			}
 		});	
 	}
 	
@@ -958,6 +982,13 @@ jQuery(document).ready(function( $ ) {
 			'garment_color' : jQuery('#da_garment_color' ).data('ddslick') ,
 			'garment_side'	: jQuery('#da_garment_side' ).data('ddslick')
 		};
+
+		//GX edit
+		if(typeof(storage_array['garment_color']) != 'undefined' && storage_array['garment_color']['selectedData'] == null) {
+			console.log( 'garment_color regenerated');
+			jQuery('#da_garment_color').ddslick('select', {index: 1 });
+		} //End GX
+
 		
 		// console.log(storage_array['garment']);
 		// console.log(saved_settings['garment']);
@@ -977,8 +1008,8 @@ jQuery(document).ready(function( $ ) {
 		}
 		
 		// Add the Garment Color Selection to the message and the weblink
-		message += '\nSelected Garment Color: \n';
-		if(typeof(storage_array['garment_color']) != 'undefined') {
+		message += '\nSelected Garment Color: \n'; //console.log( 'test'); console.log( storage_array['garment_color'] );
+		if(typeof(storage_array['garment_color']) != 'undefined' && storage_array['garment_color']['selectedData'] != null) {
 			message += decodeHtml(storage_array['garment_color']['selectedData']['value']) + '\n';	
 			weblink += '&garment_color='+encodeURIComponent(storage_array['garment_color']['selectedData']['value']);
 		}
@@ -1159,7 +1190,7 @@ jQuery(document).ready(function($) {
         $("#nav-wrapper .grid.col-700>img").click(function() {
             $( "#nav-wrapper .col-220.grid.fit.search-foot" ).toggle( "slow", function() {
             });
-          });
+          }); 
 //          if($(window).innerWidth() < 980){
 //            $( "#content-full .type-design>.col-460 .da_showcase" ).insertAfter( "#single_content_header_text" ); 
 //            $( "#content-full .type-design>.col-460 .da_page_title" ).insertAfter( "#single_content_header_text" ); 
@@ -1177,7 +1208,6 @@ jQuery(document).ready(function($) {
 //        });
 $( "#nav-wrapper form" ).addClass("prevent_empty_submit_1");
 $( "#container .search_page_form form" ).addClass("prevent_empty_submit_2");
-//$( ".prevent_empty_submit" ).submit(function( event ) {
 $(document).on("submit", ".prevent_empty_submit_1,.prevent_empty_submit_2" ,function( event ) {
   var search_value = $(this).find("input[type='text']").val();
   if($.trim(search_value) == ""){

@@ -9,7 +9,6 @@ if ( !defined( 'ABSPATH' ) ) {
  * Theme options upgrade bar
  */
 function impactshirts_upgrade_bar() {
-	return; //GX can remove
 	?>
 
 	<div class="upgrade-callout">
@@ -55,7 +54,6 @@ add_action( 'impactshirts_theme_options', 'impactshirts_upgrade_bar', 1 );
  * Theme Options Support and Information
  */
 function impactshirts_theme_support() {
-	return; //GX can remove
 	?>
 
 	<div id="info-box-wrapper" class="grid col-940">
@@ -148,7 +146,7 @@ function impactshirts_install_plugins() {
 	}
 
 }
-//add_action( 'tgmpa_register', 'impactshirts_install_plugins' ); //GX can remove
+add_action( 'tgmpa_register', 'impactshirts_install_plugins' );
 
 /*
  * Add notification to Reading Settings page to notify if Custom Front Page is enabled.

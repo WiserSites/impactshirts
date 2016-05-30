@@ -6,6 +6,7 @@
             "key": "field_536b9b64d416d",
             "label": "Contact Form",
             "name": "contact_form",
+            "prefix": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -24,6 +25,7 @@
             "key": "field_536b9d15214d8",
             "label": "Showcase Images",
             "name": "showcase_images",
+            "prefix": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -48,6 +50,7 @@
             "key": "field_536cc0e44e038",
             "label": "Design Number",
             "name": "design_number",
+            "prefix": "",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -71,6 +74,7 @@
             "key": "field_536d24be795ae",
             "label": "Table Shortcode",
             "name": "table_shortcode",
+            "prefix": "",
             "type": "text",
             "instructions": "put your Table shortcode here",
             "required": 0,
@@ -104,7 +108,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
-    "description": "",
-    "modified": 1463570200
+    "modified": 1426096451
 }
