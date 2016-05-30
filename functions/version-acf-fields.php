@@ -760,6 +760,7 @@ if( function_exists('acf_add_local_field_group') ):
 						'save_other_choice' => 0,
 						'default_value' => '',
 						'layout' => 'horizontal',
+						'allow_null' => 0,
 					),
 					array (
 						'key' => 'field_55bfa14ab8819',
@@ -943,6 +944,7 @@ if( function_exists('acf_add_local_field_group') ):
 						'save_other_choice' => 0,
 						'default_value' => '',
 						'layout' => 'horizontal',
+						'allow_null' => 0,
 					),
 					array (
 						'key' => 'field_5503453396414',
@@ -1825,6 +1827,7 @@ if( function_exists('acf_add_local_field_group') ):
 						'save_other_choice' => 0,
 						'default_value' => '',
 						'layout' => 'vertical',
+						'allow_null' => 0,
 					),
 					array (
 						'key' => 'field_550d9b1de9a2c',
@@ -2973,7 +2976,7 @@ if( function_exists('acf_add_local_field_group') ):
 								'required' => 0,
 								'conditional_logic' => 0,
 								'wrapper' => array (
-									'width' => 33,
+									'width' => 50,
 									'class' => '',
 									'id' => '',
 								),
@@ -2997,7 +3000,7 @@ if( function_exists('acf_add_local_field_group') ):
 								'required' => 0,
 								'conditional_logic' => 0,
 								'wrapper' => array (
-									'width' => 33,
+									'width' => 50,
 									'class' => '',
 									'id' => '',
 								),
@@ -3012,7 +3015,7 @@ if( function_exists('acf_add_local_field_group') ):
 								'required' => 0,
 								'conditional_logic' => 0,
 								'wrapper' => array (
-									'width' => 33,
+									'width' => 50,
 									'class' => '',
 									'id' => '',
 								),
@@ -3040,6 +3043,30 @@ if( function_exists('acf_add_local_field_group') ):
 								'placeholder' => '',
 								'disabled' => 0,
 								'readonly' => 0,
+							),
+							array (
+								'key' => 'field_574c0c7df7914',
+								'label' => 'Banner Height',
+								'name' => 'banner_height',
+								'type' => 'number',
+								'instructions' => 'You can change the banner height. 
+Default is 350px',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array (
+									'width' => 50,
+									'class' => '',
+									'id' => '',
+								),
+								'default_value' => '',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => 'px',
+								'min' => '',
+								'max' => '',
+								'step' => '',
+								'readonly' => 0,
+								'disabled' => 0,
 							),
 							array (
 								'key' => 'field_57397b8038578',
@@ -4389,6 +4416,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'vertical',
+				'allow_null' => 0,
 			),
 			array (
 				'key' => 'field_54d1237c4f877',
@@ -4477,6 +4505,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'horizontal',
+				'allow_null' => 0,
 			),
 			array (
 				'key' => 'field_54d1237c4f9ff',
@@ -4858,6 +4887,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'horizontal',
+				'allow_null' => 0,
 			),
 			array (
 				'key' => 'field_54d1237c500a6',
@@ -5044,6 +5074,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'vertical',
+				'allow_null' => 0,
 			),
 			array (
 				'key' => 'field_54d1086900baa',
@@ -5132,6 +5163,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'horizontal',
+				'allow_null' => 0,
 			),
 			array (
 				'key' => 'field_54d10bf16a4f9',
@@ -5624,6 +5656,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'horizontal',
+				'allow_null' => 0,
 			),
 			array (
 				'key' => 'field_54becccaf5702',

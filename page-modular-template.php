@@ -715,6 +715,8 @@ Template Name: Modular Landing Page
 					echo '<style> .'.$banner_class.'{ background-color:'.$banner['background_color'].';';
 					if( $banner['banner_image'] )
 						echo 'background-image: url('.$banner['banner_image']['url'].'); ';
+					if( $banner['banner_height'] )
+						echo 'height: '.$banner['banner_height'].'px; ';
 					echo ' }';
 
 					echo '.'.$banner_class.' .i_resp_banner_title{';
