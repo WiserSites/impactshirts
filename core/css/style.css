@@ -1087,7 +1087,7 @@ form div {
 .error404 input[type="text"],
 .error404 input[type="password"],
 .error404 input[type="email"] {
-	width: auto;
+	/*width: auto;*/
 }
 
 /* =Accessibility

@@ -1,6 +1,6 @@
 ﻿/* 
 Theme Name: Impact Shirts
-Version: 1.0.2
+Version: 1.0.1
 Author: Wiser Sites
 Author URI: http://wisersites.com
 */
@@ -36,6 +36,7 @@ Author URI: http://wisersites.com
    15. Youth Group Names Page
 
 -------------------------------------------------------------------------------------*/
+
 /*-----------------------------------------------------------------------------------*/
 /*	0.	Design Builder App
 /*-----------------------------------------------------------------------------------*/
@@ -171,7 +172,9 @@ body .dd-pointer-up {border: solid 10px transparent !important;border-bottom: so
 /*-----------------------------------------------------------------------------------*/
 /*	Group Names
 /*-----------------------------------------------------------------------------------*/
-
+.group-names {
+	width: 103%;
+}
 .group-names > ul > li {
 	background:#f2f2f2;
 	width:17.7%
@@ -412,7 +415,19 @@ a.viewAllDesigns {
   font-weight: normal;
   padding-left: 0;
 }
-
+.nc_socialPanel {
+	margin-top: 32px!important;
+	/*display: table;*/
+	clear: right;
+	float: right;
+	text-align: right;
+	/*width: auto !important;*/
+}
+div.nc_socialPanel .nc_tweetContainer {
+	text-align: left;
+	display: inline-block;
+	float: none;
+}
 #menu-footer-menu li {
  	list-style-type:none;  
 }
@@ -1589,6 +1604,13 @@ overflow: hidden;
 /*-----------------------------------------------------------------------------------*/
 /*	13.	404 Page
 /*-----------------------------------------------------------------------------------*/
+.error404 {
+
+}
+.error404 #content {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
 .customerReviews h3 {
 	font-weight: 500;
 	color: #666;
@@ -2297,14 +2319,18 @@ a.returnHomepage {
     .testimonialSlider .testimonial img, #featured .testimonialSlider .testimonial img{
         margin-right: 0px;
     }
-.group-names>ul>li{
-    width: 46%;
-}
-.group-names > ul > li.grid.col-172 .group_image_class{
-        /*display: inline-block;*/
-    height: 310px;
-    overflow: hidden;
-}
+	
+	.group-names {
+		width: 102.5%;
+	}
+	.group-names>ul>li{
+		width: 46%;
+	}
+	.group-names > ul > li.grid.col-172 .group_image_class{
+			/*display: inline-block;*/
+		height: 310px;
+		overflow: hidden;
+	}
 
 }
 @media screen and (max-width: 732px){
@@ -2885,33 +2911,89 @@ a.returnHomepage {
 .i_responsive_banner_content {
 	height: 350px;
 }
-.i_resp_banner_title {
-	margin: 20px auto;
+.i_centering_div {
+	/*height: 150px;*/
+}
+.i_resp_banner_title,
+h1.i_resp_banner_title {
+	margin: 0 auto 30px auto;
 	text-align: center;
+	font-size: 28px;
 }
 .i_resp_banner_tagline {
-	margin: 10px auto;
+	margin: 0 auto 36px auto;
 	text-align: center;
+	font-size: 20px;
 }
 .i_resp_btn {
 	background: #0971a8;
 	border-radius: 25px;
 	color: #fff;
 	display: table;
-	margin: 24px auto;
+	margin: 10px auto 0 auto; /*14px auto 10px*/
 	padding: 10px 40px;
 	text-shadow: none;
+	text-align: center;
+	box-sizing: border-box;
 }
 .i_resp_btn:hover {
 	color: #fff;
 	opacity: 0.96;
 }
 .i_resp_search_form {
-	display: table;
-	margin: 24px auto;
+	/*display: table;*/
+	display: block;
+	overflow: hidden;
+	clear: right;
+	margin: 0 auto; /*20px auto;*/
+	max-width: 800px;
+	box-sizing: border-box;
+	float: none;
 }
 .i_resp_search_form #searchform {
 	margin: 0;
+}
+.i_resp_search_form #searchform .submit,
+.i_resp_search_form #searchform .submit:hover {
+	border-radius: 0 36px 36px 0;
+	background-size: 30% !important;
+	background-position: center !important;
+	width: 15%;
+	height: 62px;
+}
+.i_resp_search_form #searchform input#s {
+	border-radius: 36px 0 0 36px;
+	padding: 6px 10px 6px 28px;
+	font-size: 1.3125rem;
+	height: 62px;
+	width: 85%;
+}
+
+.banner_ind_button_div {
+	padding: 2px 10px;
+}
+.banner_ind_button .i_resp_btn  {
+	width: 100%;
+}
+.banner_ind_button  {
+	margin: auto;
+	float: none !important;
+}
+
+
+.col-md-edge_to_edge {
+	margin-bottom: 10px;
+}
+.col-md-edge_to_edge > .i_responsive_banner_inner {
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 49.3%;
+	padding: 0;
+}
+.col-md-edge_to_edge .i_responsive_banner_content {
+	background-position: center;
+	background-size: cover;
 }
 
 /*
@@ -2936,6 +3018,19 @@ a.a_button, .a_button {
 	width: 100%;
 }
 
+
+@media (max-width: 768px) {
+	.i_resp_search_form {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 600px) {
+	.i_resp_search_form #searchform .submit,
+	.i_resp_search_form #searchform .submit:hover {
+		background-size: 40% !important;
+	}
+}
 
 
 /*

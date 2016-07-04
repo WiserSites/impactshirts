@@ -710,7 +710,7 @@ Template Name: Modular Landing Page
 					$banner_n++;
 					$banner_class = 'banner_'.$module_n.'_'.$banner_n;
 					$banner_url = $banner['banner_url'];
-
+					//if( $banner['banner_width'] == 'edge_to_edge'){}
 					//Render style
 					echo '<style> .'.$banner_class.'{ background-color:'.$banner['background_color'].';';
 					if( $banner['banner_image'] )
@@ -722,11 +722,15 @@ Template Name: Modular Landing Page
 					echo '.'.$banner_class.' .i_resp_banner_title{';
 					if( $banner['title_text_color'] )
 						echo 'color: '.$banner['title_text_color'].' !important; ';
+					if( $banner['title_font_size'] && $banner['title_font_size'] != 'default')
+						echo 'font-size: '.$banner['title_font_size'].'px !important; ';
 					echo ' }';
 
 					echo '.'.$banner_class.' .i_resp_banner_tagline{';
 					if( $banner['tagline_text_color'] )
 						echo 'color: '.$banner['tagline_text_color'].' !important; ';
+					if( $banner['tagline_font_size'] && $banner['tagline_font_size'] != 'default')
+						echo 'font-size: '.$banner['tagline_font_size'].'px !important; ';
 					echo ' }';
 
 					echo '.'.$banner_class.' .i_resp_btn{';
@@ -740,29 +744,52 @@ Template Name: Modular Landing Page
 						echo 'background-color: '.$banner['search_box_color'].' !important; ';
 					echo ' }';
 
+					if( $banner['banner_bottom_element'] != 'none' ){
+						echo '.'.$banner_class.' .i_centering_div {';
+						if( $banner['search_box_color'] )
+							//echo 'height: 150px; ';
+						echo ' }';
+					}
+
 					echo '</style>';
 					//end rendering style
 
-					echo '<div class="i_responsive_banner col-md-'.$banner['banner_width'].'"> <div class="i_responsive_banner_inner"> <div class="i_responsive_banner_content '.$banner_class.'  clearfix">';
+					echo '<div class="i_responsive_banner col-md-'.$banner['banner_width'].'"> <div class="i_responsive_banner_inner"> <div class="i_responsive_banner_content '.$banner_class.'  clearfix"><div class="i_centering_div">';
 
 					/*if( $banner['banner_image'] )
 						echo '<img src="'.$banner['banner_image']['url'].'" >';*/
 
-					if( $banner['title_text'] )
-						echo '<h2 class="i_resp_banner_title" >'.$banner['title_text'].'</h2>';
-					if( $banner['tagline_text'] )
-						echo '<h4 class="i_resp_banner_tagline">'.$banner['tagline_text'].'</h4>';
+					if( $banner['enable_title'] ) {
+						echo '<h2 class="i_resp_banner_title" >';
+						if( $banner['title_text'] )
+							echo $banner['title_text'];
+						echo '</h2>';
+					}
+					if( $banner['enable_tagline'] ) {
+						echo '<h4 class="i_resp_banner_tagline">';
+						if( $banner['tagline_text'] )
+							echo $banner['tagline_text'];
+						echo '</h4>';
+					}
 
-					if( $banner['button_text'] )
-						echo '<a href="'.$banner_url.'" class="i_resp_btn">'.$banner['button_text'].'</a>';
+					if( $banner['banner_bottom_element'] == 'button' &&  $banner['enable_button'] ) {
+						$button_div_class = '';
+						if( $banner['i_button_size'] != 0 ){
+							$button_div_class = 'banner_ind_button col-md-'.$banner['i_button_size'];
+						}
+						echo '<div class="banner_ind_button_div"> <div class="'.$button_div_class.'">';
+						if( $banner['button_text'] )
+							echo '<a href="'.$banner_url.'" class="i_resp_btn">'.$banner['button_text'].'</a>';
+						echo '</div></div>';
+					}
 
-					if( $banner['enable_search_box'] ){
+					if( $banner['banner_bottom_element'] == 'search_bar' &&  $banner['enable_search_box'] ){
 						echo '<div class="i_resp_search_form">';
 						get_search_form();
 						echo '</div>';
 					}
 
-					echo '</div> </div> </div>';
+					echo '</div> </div> </div> </div>';
 				}
 				echo '</div>';
 			}
@@ -770,7 +797,7 @@ Template Name: Modular Landing Page
 
 
 		/*********************************************
-		Module Type: A_button
+		Module Type: A button
 		 *********************************************/
 
 		elseif($module['moduleType'] == 'a_button'):

@@ -22,7 +22,7 @@ if( !defined( 'ABSPATH' ) ) {
 get_header(); ?>
 
 <div id="content-full" class="grid col-940"><!-- single-design.php -->
-    <script>
+    <script type="text/javascript" data-cfasync="false" >
         jQuery(document).ready(function($) {
     if($(window).innerWidth() < 980){
             $( "#content-full .type-design>.col-460 .da_showcase" ).insertAfter( "#single_content_header_text" ); 
@@ -228,7 +228,7 @@ get_header(); ?>
 								// else:
 								//	echo '<div class="grid col-460 fit"><div id="da_ink_color_'.$colorNumber.'" data-index="'.$colorNumber.'"></div></div>';
 								// endif;
-								echo '<script>var da_ink_colors_'.$colorNumber.' = '.json_encode($ink_color_array[$count]).'</script>';
+								echo '<script type="text/javascript" data-cfasync="false">var da_ink_colors_'.$colorNumber.' = '.json_encode($ink_color_array[$count]).'</script>';
 								
 								++$count;
 							endwhile;
@@ -301,6 +301,9 @@ get_header(); ?>
 							echo '<canvas id="design_canvas" class="da_canvas" width="400" height="550"></canvas>';
 							
 							// One image for each design layer to use as start points
+							/*if( get_current_user_id() == 1 ){
+								i_print( $fields['design_layers'] );
+							}*/
 							foreach($fields['design_layers'] as $design_layer):
 								$image_link = str_replace($root,$new_root,$design_layer['design_layer']['url']);
 								// $image_link = $design_layer['design_layer']['url'];
@@ -368,7 +371,7 @@ get_header(); ?>
 							*/
 						
 							?>
-							<script>
+							<script type="text/javascript" data-cfasync="false">
 						
 							
 							// Garment and Garment Color Data Arrays

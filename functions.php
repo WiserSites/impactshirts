@@ -63,8 +63,60 @@ add_image_size('contest',550,366,true);
 
 wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
 
+/* Exclude JS from rocket_loader*/
+function rocket_loader_attributes_start() {
+	ob_start();
+}
+
+function rocket_loader_attributes_end() {
+	$script_out = ob_get_clean();
+	$script_out = str_replace(
+		"type='text/javascript' src='{rocket-ignore}",
+		'data-cfasync="false"'." src='",
+		$script_out);
+	print $script_out;
+}
+
+function rocket_loader_attributes_mark($url) {
+	// Set up which scripts/strings to ignore
+	//return "{rocket-ignore}$url";
+	$ignore = array (
+		'.js',
+		'.min.js'
+	);
+	//if( get_current_user_id() == 1 ){ i_print( $url ); }
+	//matches only the script file name
+	preg_match('/(.*)\?/', $url, $_url);
+	if (isset($_url[1]) && substr($_url[1], -3)=='.js') {
+		foreach($ignore as $s) {
+			if (strpos($_url[1], $s)!==false)
+				return "$url' data-cfasync='false";
+				//return "{rocket-ignore}$url";
+		}
+		return "$url' data-cfasync='true";
+	}
+
+	return "$url";
+
+}
+if (!is_admin()) {
+	add_filter( 'clean_url', 'rocket_loader_attributes_mark', 11, 1);
+	add_action( 'wp_print_scripts', 'rocket_loader_attributes_start');
+	add_action( 'print_head_scripts', 'rocket_loader_attributes_end');
+	//add_filter('autoptimize_filter_js_defer','aj_ao_override_defer',10,1);
+}
+function aj_ao_override_defer($defer) {
+	if( get_current_user_id() == 1 ){ i_print( $defer ); }
+	if (your_condition === true) {
+		return $defer." data-cfasync=\"false\"";
+	} else {
+		return $defer;
+	}
+}
+
+/* ------------------------------------------------------------ */
 function loadImpactScripts() {
-	wp_enqueue_script( 'custom', '/wp-content/themes/impactshirts/script.js?ver=4.4.32', array( 'jquery' ));
+	wp_enqueue_script( 'custom', '/wp-content/themes/impactshirts/script.js?ver=4.4.32', array( 'jquery' ), null, false);
 	wp_enqueue_style( 'impact_styles', get_template_directory_uri() . '/style.css' );
 }
 add_action('wp_enqueue_scripts','loadImpactScripts');

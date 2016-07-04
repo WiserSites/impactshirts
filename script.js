@@ -4,7 +4,7 @@
 //Website: http://designwithpc.com
 //Twitter: http://twitter.com/chaudharyp
 
-console.log( 'v4.4.5' ); //GX version
+console.log( 'v4.4.44' ); //GX version
 var QueryString = function () {
   // This function is anonymous, is executed immediately and 
   // the return value is assigned to QueryString!
@@ -370,7 +370,53 @@ var QueryString = function () {
 var wait_ajax_response = false;
 var res_status_n = 1;
 //
-jQuery(document).ready(function( $ ) {
+jQuery(document).ready( function( $ ) {
+	//Start -> For responsive banners - edge to edge styling
+	function responsive_banners_styling(){ console.log('responsive_banners_styling');
+		if( $('.i_responsive_banner_content').length ){
+			$( '.i_responsive_banner_content' ).each( function( index, el ){
+				var banner = $(this); var n_fields = []; var free_area = 0; var margin_b = 0;
+				var banner_h = banner.height();
+				/*if( banner.find( '.i_resp_banner_title' ).length ){
+				 var title_h = banner.find( '.i_resp_banner_title' ).height();
+				 free_area += title_h; n_fields.push('.i_resp_banner_title');
+				 }
+				 if( banner.find( '.i_resp_banner_tagline' ).length ){
+				 var tagline_h = banner.find( '.i_resp_banner_tagline' ).height();
+				 free_area += tagline_h; n_fields.push('.i_resp_banner_tagline');
+				 }
+				 if( banner.find( '.banner_ind_button_div' ).length ){
+				 var button_h = banner.find( '.banner_ind_button_div' ).height();
+				 free_area += button_h; n_fields.push('.banner_ind_button_div');
+				 }
+				 if( banner.find( '.i_resp_search_form' ).length ){
+				 var search_h = banner.find( '.i_resp_search_form' ).height();
+				 free_area += search_h; n_fields.push('.i_resp_search_form');
+				 }
+
+				 free_area = banner_h - free_area;
+				 margin_b = free_area/n_fields.length;
+
+				 var i;
+				 $( n_fields[ 0 ] ).css( { 'margin-top': 0 } );
+				 for (i = 0; i < (n_fields.length-1); ++i) {
+				 banner.find( n_fields[i] ).css('margin-bottom', margin_b );
+				 }
+				 $( n_fields[ (n_fields.length-1) ] ).css( { 'margin-bottom': 0, 'margin-top': 0 } );*/
+
+				banner_h = banner.outerHeight(); //console.log(n_fields);
+				//console.log( 'banner_h = ' + banner_h + ' i_centering_div =' + banner.find('.i_centering_div').height() );
+				margin_b = ( banner_h - banner.find('.i_centering_div').outerHeight() )/2;
+				if( margin_b > 0 )
+					banner.find('.i_centering_div').css('margin-top', margin_b );
+
+				//console.log( free_area + ' n_fields.length = ' + n_fields.length +' margin_b = ' + margin_b );
+			});
+		}
+	} responsive_banners_styling();
+	$( window ).resize( responsive_banners_styling );
+	//End -> For responsive banners - edge to edge styling
+	
 	if(jQuery('.thisIsTheNumber').length) {
 		var number = jQuery('.thisIsTheNumber').text();
 		jQuery('#input_6_5,#input_5_5').val(number);
@@ -441,7 +487,8 @@ jQuery(document).ready(function( $ ) {
 	jQuery('.testimonial').eq(0).fadeIn();
 	setInterval(function() {
 		if(jQuery('.testimonialSlider').length) {
-			if(jQuery('.testimonialSlider').is(':hover')) {} else {
+			//$('li:hover').length === 0
+			if(jQuery('.testimonialSlider:hover').length !==0) {} else { //jQuery('.testimonialSlider').is(':hover') //
 				jQuery('.testimonial').eq(0).fadeOut('slow',function() {
 					jQuery('.testimonialStretchContainer').append(jQuery('.testimonial').eq(0));
 				});
@@ -552,7 +599,7 @@ jQuery(document).ready(function( $ ) {
 	}
 	
 	i1 = 0;
-	if(jQuery('#da_ink_color_1').length) {
+	if(jQuery('#da_ink_color_1').length && typeof da_ink_colors_1 !== 'undefined' ) {
 		jQuery('#da_ink_color_1').ddslick({
 			data:da_ink_colors_1,
 			width:'100%',
@@ -569,7 +616,7 @@ jQuery(document).ready(function( $ ) {
 	};
 	
 	i2 = 0;
-	if(jQuery('#da_ink_color_2').length) {
+	if(jQuery('#da_ink_color_2').length && typeof da_ink_colors_2 !== 'undefined' ) {
 		jQuery('#da_ink_color_2').ddslick({
 			data:da_ink_colors_2,
 			width:'100%',
@@ -586,7 +633,7 @@ jQuery(document).ready(function( $ ) {
 	};
 	
 	i3 = 0;
-	if(jQuery('#da_ink_color_3').length) {
+	if(jQuery('#da_ink_color_3').length && typeof da_ink_colors_3 !== 'undefined' ) {
 		jQuery('#da_ink_color_3').ddslick({
 			data:da_ink_colors_3,
 			width:'100%',
@@ -603,7 +650,7 @@ jQuery(document).ready(function( $ ) {
 	};
 	
 	i4 = 0;
-	if(jQuery('#da_ink_color_4').length) {
+	if(jQuery('#da_ink_color_4').length && typeof da_ink_colors_4 !== 'undefined' ) {
 		jQuery('#da_ink_color_4').ddslick({
 			data:da_ink_colors_4,
 			width:'100%',
@@ -621,7 +668,7 @@ jQuery(document).ready(function( $ ) {
 	};
 	
 	i5 = 0;
-	if(jQuery('#da_ink_color_5').length) {
+	if(jQuery('#da_ink_color_5').length && typeof da_ink_colors_5 !== 'undefined') {
 		jQuery('#da_ink_color_5').ddslick({
 			data:da_ink_colors_5,
 			width:'100%',
@@ -639,7 +686,7 @@ jQuery(document).ready(function( $ ) {
 	};
 	
 	i6 = 0;
-	if(jQuery('#da_ink_color_6').length) {
+	if(jQuery('#da_ink_color_6').length && typeof da_ink_colors_6 !== 'undefined' ) {
 		jQuery('#da_ink_color_6').ddslick({
 			data:da_ink_colors_6,
 			width:'100%',
@@ -687,8 +734,7 @@ jQuery(document).ready(function( $ ) {
 			imageURL = jQuery('#da_design_'+i).attr('src');
 			imageURL = imageURL.replace('http://djigfogczfdpe.cloudfront.net/',home_url);
 			jQuery('#da_design_'+i).attr('src',imageURL);
-			// console.log(imageURL);
-
+			//console.log(imageURL);
 		};
 		
 		i = 0;
@@ -782,7 +828,7 @@ jQuery(document).ready(function( $ ) {
 
 		// Loop through each design layer
 		for (var i = 1 ; i <= d ; i+= 1) {
-			
+			console.log( 'i = '+ i );
 			// If this is the initial page load and we have Query Strings
 			if (pageload !== undefined && QueryString != false) {
 			
@@ -921,7 +967,7 @@ jQuery(document).ready(function( $ ) {
 		jQuery('#input_6_8').val(ct_value);
 	});
 	jQuery('#field_6_5, #field_6_8').hide();
-	
+
 });
 
 	function setDDslick(element,value) {
@@ -1182,8 +1228,9 @@ jQuery(document).ready(function( $ ) {
 jQuery(document).ready(function($) {
 	setTimeout( function() {
 		jQuery('.group-names').masonry({
-		  // options...
-		  itemSelector: '.grid'
+			// options...
+			itemSelector: '.grid',
+			percentPosition: true
 		});
 	} , 500 );
         
