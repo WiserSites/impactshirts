@@ -944,7 +944,12 @@ function string_limit_words($string, $word_limit){
 
 function modify_the_search_filter($query) {
 	if ($query->is_search) {
-		$query->set('post_type', 'design');
+		if( $_GET['post_type'] == 'group_name' ){
+			$query->set('post_type', 'group_name');
+		} else {
+			$query->set('post_type', 'design');
+		}
+
 	};
 	return $query;
 };
@@ -1230,7 +1235,10 @@ function da_designer() {
 
 function impact_search_form( $form ) {
 
-	$form = '<form method="get" id="searchform" action="' . home_url( '/' ) . '"> <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label><input type="submit" class="submit" name="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'"><input type="text" class="field" name="s" id="s" value="" placeholder="Search Designs..."></form>';
+	//$form = '<form method="get" id="searchform" action="' . home_url( '/' ) . '"> <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label><input type="submit" class="submit" name="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'"><input type="text" class="field" name="s" id="s" value="" placeholder="Search Designs..."></form>';
+	$form = '<form method="get" id="searchform" action="' . home_url( '/' ) . '"> <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>';
+	$form.= '<button type="submit" class="submit fa fa-search" name="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'"> </button>';
+	$form.= '<input type="text" class="field" name="s" id="s" value="" placeholder="Search Designs..."></form>';
 
 	return $form;
 }

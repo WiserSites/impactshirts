@@ -1154,6 +1154,7 @@ form div {
 
 .top-menu > li:first-child > a {
 	border-left: none;
+	padding-left: 0;
 }
 
 .top-menu li a:hover {

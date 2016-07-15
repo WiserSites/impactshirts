@@ -413,10 +413,10 @@ jQuery(document).ready( function( $ ) {
 				//console.log( free_area + ' n_fields.length = ' + n_fields.length +' margin_b = ' + margin_b );
 			});
 		}
-	} responsive_banners_styling();
+	} responsive_banners_styling(); setTimeout( responsive_banners_styling, 500); setTimeout( responsive_banners_styling, 1000);
 	$( window ).resize( responsive_banners_styling );
 	//End -> For responsive banners - edge to edge styling
-	
+	$('#impactshirts_menu_button').addClass('fa fa-bars');
 	if(jQuery('.thisIsTheNumber').length) {
 		var number = jQuery('.thisIsTheNumber').text();
 		jQuery('#input_6_5,#input_5_5').val(number);
@@ -1234,7 +1234,7 @@ jQuery(document).ready(function($) {
 		});
 	} , 500 );
         
-        $("#nav-wrapper .grid.col-700>img").click(function() {
+        $("#nav-wrapper .grid.col-700>img, .i_m_search_btn").click(function() {
             $( "#nav-wrapper .col-220.grid.fit.search-foot" ).toggle( "slow", function() {
             });
           }); 

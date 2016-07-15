@@ -569,14 +569,17 @@ Template Name: Modular Landing Page
 					$i++;
 					$group_name = get_fields( $post->ID );
 					// var_dump($group_name);
-					$the_link = '';
+					$the_link = ''; $li_class = '';
 					if( $group_name['image_or_design'] == 'Design' ){
 						if( $i_link = get_permalink( $group_name['design']->ID ) )$the_link = $i_link;
 					} else {
 						if( $group_name['link'] ) $the_link = $group_name['link'];
 					}
 					// Begin the container
-					echo '<li class="grid col-172"><ul><li>';
+					if( $the_link ){
+						$li_class = 'i_grid_hover';
+					}
+					echo '<li class="grid col-172 '.$li_class.'"><ul><li>';
 
 					if( $the_link )
 						echo '<a class="archive_single_a" href="'.$the_link.'"> ';
@@ -715,8 +718,18 @@ Template Name: Modular Landing Page
 					echo '<style> .'.$banner_class.'{ background-color:'.$banner['background_color'].';';
 					if( $banner['banner_image'] )
 						echo 'background-image: url('.$banner['banner_image']['url'].'); ';
-					if( $banner['banner_height'] )
-						echo 'height: '.$banner['banner_height'].'px; ';
+					if( $banner['banner_default_height'] && $banner['banner_default_height'] != 'custom' ){
+						echo 'height: '.$banner['banner_default_height'].'px; ';
+					} else {
+						if( $banner['banner_height'] )
+							echo 'height: '.$banner['banner_height'].'px; ';
+					}
+
+					echo ' }';
+
+					echo '.'.$banner_class.' .i_resp_banner_title_icon{';
+					if( $banner['title_icon_size'] && $banner['title_icon_size'] != '')
+						echo 'max-width: '.$banner['title_icon_size'].'px !important; ';
 					echo ' }';
 
 					echo '.'.$banner_class.' .i_resp_banner_title{';
@@ -759,6 +772,13 @@ Template Name: Modular Landing Page
 					/*if( $banner['banner_image'] )
 						echo '<img src="'.$banner['banner_image']['url'].'" >';*/
 
+					if( $banner['enable_title_icon'] ) {
+						echo '<div class="i_resp_banner_title_icon_div" >';
+						if( $banner['title_icon_image'] && $banner['title_icon_image']['url'] )
+							echo '<img src="'.$banner['title_icon_image']['url'].'" class="i_resp_banner_title_icon">';
+						echo '</div>';
+					}
+					
 					if( $banner['enable_title'] ) {
 						echo '<h2 class="i_resp_banner_title" >';
 						if( $banner['title_text'] )

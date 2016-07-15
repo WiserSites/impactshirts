@@ -471,7 +471,7 @@ jQuery(document).ready(function ($) {
 		}
 	}
 	;
-	$('.main-nav').append('<a id="impactshirts_menu_button"></a>');
+	$('.main-nav').append('<a id="impactshirts_menu_button" class="fa fa-bars"></a>');
 	$('.main-nav').prepend('<div id="impactshirts_current_menu_item">' + current + '</div>');
 	$('a#impactshirts_menu_button, #impactshirts_current_menu_item').click(function () {
 		$('.js .main-nav .menu').slideToggle(function () {

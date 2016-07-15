@@ -124,7 +124,8 @@ jQuery(window).scroll( function() {
     	<div class="nav-sub-wrapper">
         	<?php if($header_nav_search == true) : ?>
         	<div class="grid col-700">
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/images/spyglass3.png">
+					<span class="i_m_search_btn fa fa-search" ></span>
+                    <?php /*<img src="<?php echo get_stylesheet_directory_uri()?>/images/spyglass3.png">*/ ?>
             <?php else: ?>
             <div class="grid col-940">
             <?php endif; ?>

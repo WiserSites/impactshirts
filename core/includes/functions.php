@@ -267,7 +267,7 @@ if ( !function_exists( 'impactshirts_css' ) ) {
 			wp_enqueue_style( 'impactshirts-style', get_template_directory_uri() . '/core/css/style.min.css', false, $impactshirts['Version'] );
 		} else {
 			wp_enqueue_style( 'impactshirts-style', get_template_directory_uri() . '/core/css/style.css', false, $impactshirts['Version'] );
-			wp_enqueue_style( 'impactshirts-media-queries', get_template_directory_uri() . '/core/css/impactshirts.css', false, $impactshirts['Version'] );
+			wp_enqueue_style( 'impactshirts-media-queries', get_template_directory_uri() . '/core/css/impactshirts.css', false, $impactshirts['Version'].'1' );
 		}
 
 		if ( is_rtl() ) {
@@ -293,8 +293,8 @@ if ( !function_exists( 'impactshirts_js' ) ) {
 
 		// JS at the bottom for fast page loading.
 		// except for Modernizr which enables HTML5 elements & feature detects.
-		wp_enqueue_script( 'modernizr', $template_directory_uri . '/core/' . $directory . '/impactshirts-modernizr' . $suffix . '.js', array( 'jquery' ), '2.6.1', false );
-		wp_enqueue_script( 'impactshirts-scripts', $template_directory_uri . '/core/' . $directory . '/impactshirts-scripts' . $suffix . '.js', array( 'jquery' ), '1.2.6', true );
+		wp_enqueue_script( 'modernizr', $template_directory_uri . '/core/' . $directory . '/impactshirts-modernizr' . $suffix . '.js', array( 'jquery' ), '2.6.2', false );
+		wp_enqueue_script( 'impactshirts-scripts', $template_directory_uri . '/core/' . $directory . '/impactshirts-scripts' . $suffix . '.js', array( 'jquery' ), '1.2.7', true );
 		if ( !wp_script_is( 'tribe-placeholder' ) ) {
 			wp_enqueue_script( 'jquery-placeholder', $template_directory_uri . '/core/' . $directory . '/jquery.placeholder' . $suffix . '.js', array( 'jquery' ), '2.0.7', true );
 		}

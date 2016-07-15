@@ -31,14 +31,17 @@ Template Name: Youth Group Names v2.0
 		$i++;
 	
 		// var_dump($group_name);
-		$the_link = '';
+		$the_link = ''; $li_class = '';
 		if( $group_name['image_or_design'] == 'Design' ){
 			if( $i_link = get_permalink( $group_name['design']->ID ) )$the_link = $i_link;
 		} else {
 			if( $group_name['link'] ) $the_link = $group_name['link'];
 		}
 		// Begin the container
-		echo '<li class="grid col-172"><ul><li>';
+		if( $the_link ){
+			$li_class = 'i_grid_hover';
+		}
+		echo '<li class="grid col-172 '.$li_class.'"><ul><li>';
 		if( $the_link )
 			echo '<a class="archive_single_a" href="'.$the_link.'"> ';
 		echo '<h2>'.$group_name['group_name'].'</h2> ';
