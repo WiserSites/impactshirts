@@ -319,6 +319,7 @@ function cptui_register_my_cpt_design() {
 		'capability_type' => 'post',
 		'map_meta_cap' => true,
 		'hierarchical' => false,
+		'exclude_from_search'   => false,
 		'menu_icon' => 'dashicons-businessman',
 		'rewrite' => array('slug' => 'design', 'with_front' => true),
 		'query_var' => true,
@@ -610,7 +611,7 @@ function extend_search( $search, &$wp_query ) {
             )
         )";
 	}
-	/*if( get_current_user_id() == 1 ){
+	/*if( get_current_user_id() == 16 ){
 		i_print( $search );
 	}*/
 	return $search;
@@ -637,13 +638,14 @@ add_filter('posts_join', 'search_join' );
 function search_join ($join){
 	global $pagenow, $wpdb;
 	// I want the filter only when performing a search on edit page of Custom Post Type named "segnalazioni"
-	if ( is_admin() && $pagenow=='edit.php' && $_GET['post_type']=='design' && $_GET['s'] != '') {
+	if ( is_admin() && $pagenow=='edit.php' && $_GET['post_type']=='design' && $_GET['s'] != '' && false) { //GX excl
 		$join .='LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
 	}
 	return $join;
+	//if( get_current_user_id() == 16 ){ echo '<pre>';print_r( $wpdb ); exit; }
 }
 
-add_filter( 'posts_where', 'search_where' );
+//add_filter( 'posts_where', 'search_where' ); //GX excl
 function search_where( $where ){
 	global $pagenow, $wpdb;
 	// I want the filter only when performing a search on edit page of Custom Post Type named "segnalazioni"

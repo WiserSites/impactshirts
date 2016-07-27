@@ -1,6 +1,6 @@
 ﻿/* 
 Theme Name: Impact Shirts
-Version: 1.0.4
+Version: 1.0.5
 Author: Wiser Sites
 Author URI: http://wisersites.com
 */
@@ -370,6 +370,7 @@ body {
     font-size: 16px;
     background: #fff;
     padding: 183px 0 0 0 !important;
+    overflow-x: hidden;
 }
 
 #container {
@@ -766,9 +767,9 @@ html body #searchform .submit, html body #searchform .submit:hover {
     outline: none;
 }
 
-html body form[action="http://vbstshirts.com/"] .submit, body form[action="http://vbstshirts.com/"]#searchform .submit {
+/*html body form[action="http://vbstshirts.com/"] .submit, body form[action="http://vbstshirts.com/"]#searchform .submit {
     background: #0350AC url('/wp-content/uploads/2016/01/spyglass3.png') no-repeat 9px center !important;
-}
+}*/
 
 #nav-wrapper .grid {
     margin-bottom: 0px;
@@ -3893,7 +3894,7 @@ a.returnHomepage {
 }
 
 .i_responsive_banner_inner {
-    padding: 10px 0;
+    padding: 10px; /* 0*/
 }
 
 .i_responsive_banner_content {
@@ -4000,7 +4001,7 @@ h1.i_resp_banner_title {
     width: 100vw;
     position: relative;
     margin-left: -50vw;
-    left: 50%; /*49.3%*/
+    left: 49.3%; /*50%*/
     padding: 0;
 }
 

@@ -767,7 +767,15 @@ Template Name: Modular Landing Page
 					echo '</style>';
 					//end rendering style
 
-					echo '<div class="i_responsive_banner col-md-'.$banner['banner_width'].'"> <div class="i_responsive_banner_inner"> <div class="i_responsive_banner_content '.$banner_class.'  clearfix"><div class="i_centering_div">';
+					echo '<div class="i_responsive_banner col-md-'.$banner['banner_width'].'"> <div class="i_responsive_banner_inner"> ';
+					if( $banner['banner_bottom_element'] == 'none' && trim( $banner_url ) != '' ){
+						$b_url_target = '';
+						if( $banner['open_banner_url_in_new_tab'] )
+							$b_url_target = '_blank';
+						echo '<a href="'.$banner_url.'" class="i_responsive_banner_wrap_link" target="'.$b_url_target.'" >';
+					}
+
+					echo '<div class="i_responsive_banner_content '.$banner_class.'  clearfix"> <div class="i_centering_div">';
 
 					/*if( $banner['banner_image'] )
 						echo '<img src="'.$banner['banner_image']['url'].'" >';*/
@@ -809,7 +817,10 @@ Template Name: Modular Landing Page
 						echo '</div>';
 					}
 
-					echo '</div> </div> </div> </div>';
+					echo '</div> </div>';
+					if( $banner['banner_bottom_element'] == 'none' && trim( $banner_url ) != '' )
+						echo '</a>';
+					echo '</div> </div>';
 				}
 				echo '</div>';
 			}
