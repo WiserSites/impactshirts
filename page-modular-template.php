@@ -735,8 +735,11 @@ Template Name: Modular Landing Page
 					echo '.'.$banner_class.' .i_resp_banner_title{';
 					if( $banner['title_text_color'] )
 						echo 'color: '.$banner['title_text_color'].' !important; ';
-					if( $banner['title_font_size'] && $banner['title_font_size'] != 'default')
-						echo 'font-size: '.$banner['title_font_size'].'px !important; ';
+					if( $banner['title_font_size'] && $banner['title_font_size'] != 'default'){
+                        echo 'font-size: '.$banner['title_font_size'].'px !important; ';
+                        echo 'line-height: '.$banner['title_font_size'].'px; ';
+                    }
+
 					echo ' }';
 
 					echo '.'.$banner_class.' .i_resp_banner_tagline{';
