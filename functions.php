@@ -1284,8 +1284,15 @@ if( !function_exists( "i_print" ) ) {
 	}
 }
 
+if( isset( $_GET['get_thumb_data'] ) ){
+	i_get_thumb_data( $_GET['get_thumb_data'] ); exit;
+}
+function i_get_thumb_data( $thumb_id ){
+	echo wp_get_attachment_url( $thumb_id );
+}
 
 
-
-
+/*if( get_current_user_id() == 16 ){
+	i_print( get_site_url() );
+}*/
 
